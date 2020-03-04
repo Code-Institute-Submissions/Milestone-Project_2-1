@@ -1,6 +1,6 @@
 # One More Team
 
-This website will serve the purpose of helping sports fans (soccer fans initially) to be able to conveniently get relevant information on
+This website will serve the purpose of helping football fans to be able to conveniently get relevant information on
 the team they support. The aim will also be to gives fans the chance to compare two teams beside one another from different leagues, and
 support the longer-term goal of the website to give fans one more team to support. The website will inform users about:
 * Information on any team they search for (league standing, next game, contact information, club website)
@@ -28,12 +28,31 @@ potential new customers/fans
 
 #### Users visiting my website would be:
 * From anyone in the world
-* A sports fan
+* A football fan
 * English speaking
 
 #### Users on my website will want to:
 * Get inspiration for another team to support in a foreign league
 * Have an efficient and convenient way on updating themsleves on a given team's league performance
+* Be directed to where they can find more information on a given team(s)
+
+#### Why this website is a great solution:
+* Currently in the football industry there is no clear advisor for fans who would want to add to the teams(s) they support
+* Curious fans and/or fans who live and work abroad do not have any real basis/support in finding a team to follow in the new country they reside in
+* The solution can contribute towards greater globalisation of the sport, helping football teams/clubs themselves to become more international
+* More international fans can lead to new streams of commerical activity for foreign leagues and teams (through advertising game broadcasting, merchandise etc.)
+
+### User Stories
+1. As a new visitor to the website, I want it to be very clear as to what the purpose of the website is
+2. As a new visitor of the website, I want to get concise and relevent league statisitics of the team(s) I follow
+3. As a new visitor of the website, I would like some inspiration for a team in a foreign league to support, either out of curiosity or because I want to localize myself in a new country
+4. As a potential customer, I want to be able to subscribe to a team(s) so I can receive automatic updates/news via email
+5. As a potential customer, I want to have more information about a team(s), where I can be easily redirected to a club/team website to find commerical offerings
+6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
+
+### Wireframes
+
+
 
 
 
