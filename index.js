@@ -22,7 +22,7 @@ function search () {
             // THE RESPONSE YOU GET BACK IS OF STRING TYPE
             // WE NEED TO CONVERT IT TO AN OBJECT --> using JSON.parse()
             // EXTRA NOTE - BE SURE TO ORGANIZE DATA FROM API PROPERLY SO YOU CAN REFER CORRECTLY
-            data_as_an_object = JSON.parse(the_response);
+            data_as_an_object = the_response;
             
             displayDataInMyPage (data_as_an_object);
 
@@ -38,9 +38,10 @@ function search () {
     // UNDERSTAND THE FOLLOWING
     var endpoint = "https://api.football-data.org/v2/competitions/2021/standings";         // who (www.example.com) - what server  // what data do you want
     var key = "&appid=b010fe05a02c4ddc8336e4c77243bb3c";        //key to identify yourself to the server : who is asking for data?
-    var the_url = endpoint + key;                        // ELEMENTS FOR ALL API CALLS (maybe not key if api is public)
+    var the_url = endpoint + key;                       // ELEMENTS FOR ALL API CALLS (maybe not key if api is public)
     
     api_request.open ("GET", the_url, true); // ADMIT "GET" AND "true"
     api_request.send()
     
+    console.log(data_as_an_object);
 }
