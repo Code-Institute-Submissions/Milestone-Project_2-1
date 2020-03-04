@@ -26,3 +26,14 @@ potential new customers/fans
 
 ### Ideal User
 
+#### Users visiting my website would be:
+* From anyone in the world
+* A sports fan
+* English speaking
+
+#### Users on my website will want to:
+* Get inspiration for another team to support in a foreign league
+* Have an efficient and convenient way on updating themsleves on a given team's league performance
+
+
+
