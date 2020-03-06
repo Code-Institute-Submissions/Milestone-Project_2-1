@@ -1,25 +1,4 @@
-
-function displayDataInMyPage() {
-
-    console.log(data_as_an_object);
-    console.log(data_as_an_object.standings[0].table);
-
-    var team_name = document.getElementById("team_name")
-    team_name.innerHTML = data_as_an_object.standings[0].table;
-
-
-
-
-
-
-}
-
-
-function search(){
-
-    var user_input = document.getElementById("user_input").value;
-    console.log(user_input);
-
+function getData() {
 
 var xhr = new XMLHttpRequest();
 var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
@@ -34,7 +13,7 @@ xhr.onreadystatechange = function() {
 
         data_as_an_object = JSON.parse(the_response);
 
-        displayDataInMyPage (data_as_an_object);
+        displayDataInMyPage()
     }
 
     else {
@@ -44,5 +23,22 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "//api.football-data.org/v2/" + query);
 xhr.setRequestHeader("X-Auth-Token", APIKEY)
 xhr.send();
+
+}
+
+
+function displayDataInMyPage() {
+
+    getData();
+
+    console.log(data_as_an_object);
+    console.log(data_as_an_object.standings[0].table);
+
+    var team_name = document.getElementById("team_name")
+    var table = data_as_an_object.standings[0].table;
+    for (let i in table) {
+        console.log(table[i]["team"]["name"]);
+        team_name.innerHTML += table[i]["team"]["name"] + "<br>";
+    }
 
 }
