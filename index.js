@@ -1,4 +1,7 @@
-function getData() {
+var _PLDATA
+var _FRDATA
+
+function getPLData() {
 
 var xhr = new XMLHttpRequest();
 var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
@@ -11,10 +14,9 @@ xhr.onreadystatechange = function() {
         the_response = xhr.responseText;
         console.log(typeof the_response);
 
-        data_as_an_object = JSON.parse(the_response);
+        _PLDATA = JSON.parse(the_response);
 
         displayDataInMyPage()
-        console.log(datas_as_an_object);
     }
 
     else {
@@ -32,18 +34,26 @@ xhr.send();
 
 function displayDataInMyPage() {
 
-    console.log(data_as_an_object);
-    console.log(data_as_an_object.standings[0].table);
-
-    var team_name = document.getElementById("team_name")
-    var table = data_as_an_object.standings[0].table;
+    // console.log(data_as_an_object);
+    // console.log(data_as_an_object.standings[0].table);
+    var team_dropdown_div = document.getElementById("team-pl-list");
+    //console.log(team_dropdown_div.innerHTML);
+    var html_string = "";
+    var team_name = document.getElementById("team_name");
+    var table = _PLDATA.standings[0].table;
     for (let i in table) {
-        console.log(table[i]["team"]["name"]);
-        team_name.innerHTML += table[i]["team"]["name"] + "<br>";
-    }
+        // console.log(table[i]["team"]["name"]);
+        // team_name.innerHTML += table[i]["team"]["name"] + "<br>";
+        html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + table[i]["team"]["name"] + "</p>";
 
+    }
+    // console.log(html_string);
+    team_dropdown_div.innerHTML = html_string;
 }
 
-getData();
+getPLData();
 
 
+function test(team) {
+    alert (team.innerHTML);
+};
