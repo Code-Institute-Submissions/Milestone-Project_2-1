@@ -1,3 +1,5 @@
+var _DATAGLOBAL = {};
+
 function getData(leagueCode, teamListId) {
 
 var xhr = new XMLHttpRequest();
@@ -9,9 +11,11 @@ xhr.onreadystatechange = function() {
 
         the_response = xhr.responseText;
         
-        var _PLDATA = JSON.parse(the_response);
+        var league_data = JSON.parse(the_response);
 
-        displayDataInMyPage(teamListId, _PLDATA)
+        _DATAGLOBAL[leagueCode] = league_data;
+
+        displayDataInMyPage(teamListId, league_data)
         
     }
 
@@ -22,11 +26,7 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "//api.football-data.org/v2/" + query);
 xhr.setRequestHeader("X-Auth-Token", APIKEY)
 xhr.send();
-
 }
-
-
-
 
 function displayDataInMyPage(teamListId, teamListData) {
 
@@ -51,6 +51,11 @@ getData("PL", "team-pl-list");
 getData("FL1", "team-fl1-list");
 
 
-function test(team) {
-    alert (team);
+function test(i) {
+
+    alert(_DATAGLOBAL["PL"].standings[0].table[i].team.name)
+     alert(_DATAGLOBAL["FL1"].standings[0].table[i].team.name)  
+        
+    
+    // html_string += (_DATAGLOBAL["PL"].standings[0].table[i].team.name);
 };
