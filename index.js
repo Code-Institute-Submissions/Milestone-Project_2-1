@@ -1,50 +1,18 @@
-var _PLDATA
-var _FL1DATA
-
-function getFL1Data() {
+function getData(leagueCode, teamListId) {
 
 var xhr = new XMLHttpRequest();
 var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
-var query = "competitions/FL1/standings";
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-
-
-        the_response = xhr.responseText;
-
-        _FL1DATA = JSON.parse(the_response);
-
-        displayDataInMyPage()
-
-    }
-
-    else {
-        console.log("This isn't working")
-    }
-};
-xhr.open("GET", "//api.football-data.org/v2/" + query);
-xhr.setRequestHeader("X-Auth-Token", APIKEY)
-xhr.send();
-
-}
-
-
-
-function getPLData() {
-
-var xhr = new XMLHttpRequest();
-var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
-var query = "competitions/PL/standings";
+var query = "competitions/" + leagueCode + "/standings";
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
 
         the_response = xhr.responseText;
         
+        var _PLDATA = JSON.parse(the_response);
 
-        _PLDATA = JSON.parse(the_response);
-
-        displayDataInMyPage()
+        displayDataInMyPage(teamListId, _PLDATA)
+        
     }
 
     else {
@@ -60,36 +28,29 @@ xhr.send();
 
 
 
-function displayDataInMyPage() {
+function displayDataInMyPage(teamListId, teamListData) {
 
     // console.log(data_as_an_object);
     // console.log(data_as_an_object.standings[0].table);
-    var pl_dropdown_div = document.getElementById("team-pl-list");
-    var fl1_dropdown_div = document.getElementById("team-fl1-list");
+    var dropdown_div = document.getElementById(teamListId);
     //console.log(team_dropdown_div.innerHTML);
-    var pl_html_string = "";
-    var fl1_html_string = "";
-    var pl_table = _PLDATA.standings[0].table;
-    var fl1_table = _FL1DATA.standings[0].table;
-    for (let i in pl_table) {
+    var html_string = "";
+    var table = teamListData.standings[0].table;
+    for (let i in table) {
         // console.log(table[i]["team"]["name"]);
         // team_name.innerHTML += table[i]["team"]["name"] + "<br>";
-        pl_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + pl_table[i]["team"]["name"] + "</p>";
+        html_string += "<p class=\"dropdown-item\" onclick=\"test("+i+")\">"  + table[i]["team"]["name"] + "</p>";
         
     }
-    for (let i in fl1_table) {
-        fl1_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + fl1_table[i]["team"]["name"] + "</p>";
-    }
+ 
     // console.log(html_string);
-    pl_dropdown_div.innerHTML = pl_html_string;
-    fl1_dropdown_div.innerHTML = fl1_html_string;
-
+    dropdown_div.innerHTML = html_string;
 }
 
-getPLData();
-getFL1Data();
+getData("PL", "team-pl-list");
+getData("FL1", "team-fl1-list");
 
 
 function test(team) {
-    alert (team.innerHTML);
+    alert (team);
 };
