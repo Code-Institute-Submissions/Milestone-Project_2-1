@@ -8,15 +8,14 @@ var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
 var query = "competitions/FL1/standings";
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
 
 
         the_response = xhr.responseText;
-        console.log(typeof the_response);
 
         _FL1DATA = JSON.parse(the_response);
 
         displayDataInMyPage()
+
     }
 
     else {
@@ -38,11 +37,10 @@ var APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
 var query = "competitions/PL/standings";
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
 
 
         the_response = xhr.responseText;
-        console.log(typeof the_response);
+        
 
         _PLDATA = JSON.parse(the_response);
 
@@ -73,15 +71,18 @@ function displayDataInMyPage() {
     var fl1_html_string = "";
     var pl_table = _PLDATA.standings[0].table;
     var fl1_table = _FL1DATA.standings[0].table;
-    for (let i in table) {
+    for (let i in pl_table) {
         // console.log(table[i]["team"]["name"]);
         // team_name.innerHTML += table[i]["team"]["name"] + "<br>";
-        pl_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + table[i]["team"]["name"] + "</p>";
-        fl1_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + table[i]["team"]["name"] + "</p>";
+        pl_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + pl_table[i]["team"]["name"] + "</p>";
+        
+    }
+    for (let i in fl1_table) {
+        fl1_html_string += "<p class=\"dropdown-item\" onclick=\"test(this)\">"  + fl1_table[i]["team"]["name"] + "</p>";
     }
     // console.log(html_string);
     pl_dropdown_div.innerHTML = pl_html_string;
-    fl1_dropdsown_div.innerHTML = fl1_html_string;
+    fl1_dropdown_div.innerHTML = fl1_html_string;
 
 }
 
