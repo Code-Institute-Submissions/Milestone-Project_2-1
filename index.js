@@ -20,7 +20,7 @@ xhr.onreadystatechange = function() {
     }
 
     else {
-        console.log("This isn't working")
+        console.log("This isn't working") // why isn't this working?
     }
 };
 xhr.open("GET", "//api.football-data.org/v2/" + query);
@@ -30,10 +30,7 @@ xhr.send();
 
 function displayDataInMyPage(teamListId, teamListData) {
 
-    // console.log(data_as_an_object);
-    // console.log(data_as_an_object.standings[0].table);
-    var dropdown_div = document.getElementById(teamListId);
-    //console.log(team_dropdown_div.innerHTML);
+    var team_dropdown_div = document.getElementById(teamListId);
     var html_string = "";
     var table = teamListData.standings[0].table;
     for (let i in table) {
@@ -44,12 +41,11 @@ function displayDataInMyPage(teamListId, teamListData) {
     }
  
     // console.log(html_string);
-    dropdown_div.innerHTML = html_string;
+    team_dropdown_div.innerHTML = html_string;
 }
 
-getData("PL", "team-pl-list");
-getData("FL1", "team-fl1-list");
-
+getData("PL", "team-list-1");
+getData("FL1", "team-list-2");
 
 function test(i) {
 
