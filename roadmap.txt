@@ -1,0 +1,20 @@
+Roadmap
+-------
+
+
+1. 
+
+In the teamStatsInMyPage function: refactor your code :
+
+ var abdc = _DATAGLOBAL["PL"].standings[0].table[i]; // choose another name than "abcd"
+ ...
+ stats_html_string += "<p> Team Name: " +  abcd.team.name
+
+
+2. 
+
+The API key is a constant (use "const" instead of "var"), name in full uppercases (convention for constant), and set it in the global scope, not in a function.
+
+3. 
+
+
