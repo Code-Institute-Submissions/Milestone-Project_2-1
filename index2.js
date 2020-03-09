@@ -40,8 +40,10 @@ function dropdownOptionsInMyPage(teamListId, teamListData) {
     
     // console.log(html_string);
     team_dropdown_div.innerHTML = dropdown_html_string;
-    
-}
+
+
+};
+};
 
 getData("PL", "team-list-1");
 getData("FL1", "team-list-2");
@@ -53,17 +55,17 @@ function teamStatsInMyPage(i) {
 
     var team_stats_div = document.getElementsByClassName("team-stats");
     var stats_html_string = "";
-    var team_name = standings[0].table[i].team.name;
-    var team_logo = standings[0].table[i].team.crestURL;
-    var position = standings[0].table[i].position;
-    var played_games = standings[0].table[i].playedGames;
-    var won = standings[0].table[i].won;
-    var draw = standings[0].table[i].draw;
-    var lost = standings[0].table[i].lost;
-    var points = standings[0].table[i].points;
-    var goals_for = standings[0].table[i].goalsFor;
-    var goals_against = standings[0].table[i].goalsAgainst;
-    var goal_difference = standings[0].table[i].goalDifference;
+    var team_name = _DATAGLOBAL.standings[0].table[i].team.name;
+    var team_logo = _DATAGLOBAL.standings[0].table[i].team.crestURL;
+    var position = _DATAGLOBAL.standings[0].table[i].position;
+    var played_games = _DATAGLOBAL.standings[0].table[i].playedGames;
+    var won =_DATAGLOBAL.standings[0].table[i].won;
+    var draw = _DATAGLOBAL.standings[0].table[i].draw;
+    var lost = _DATAGLOBAL.standings[0].table[i].lost;
+    var points = _DATAGLOBAL.standings[0].table[i].points;
+    var goals_for = _DATAGLOBAL.standings[0].table[i].goalsFor;
+    var goals_against = _DATAGLOBAL.standings[0].table[i].goalsAgainst;
+    var goal_difference = _DATAGLOBAL.standings[0].table[i].goalDifference;
 
     stats_html_string += "<p> Team Name: " + team_name + "</p>" + "<img src=\"" + team_logo + "\">" + "<p> League Position: " + position + "</p>" + 
     "<p> Played Games: " + played_games + "</p>" + "<p> Wins: " + won + "</p>" + "<p> Draws: " + draw + "</p>" + "<p> Losses: " + lost + "</p>" +

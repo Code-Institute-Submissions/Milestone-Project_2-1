@@ -6,7 +6,7 @@
       "id": 2072,
       "name": "England"
     },
-    "name": "Premier League",
+    "name": "Premier League", // want this for each league I pull in
     "code": "PL",
     "plan": "TIER_ONE",
     "lastUpdated": "2020-03-02T10:10:03Z"
@@ -23,22 +23,22 @@
       "stage": "REGULAR_SEASON",
       "type": "TOTAL",
       "group": null,
-      "table": [
+      "table": [ // Want the following data for each team in the table array
         {
-          "position": 1,
+          "position": 1, // want this
           "team": {
             "id": 64,
-            "name": "Liverpool FC",
-            "crestUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg"
+            "name": "Liverpool FC", // want this
+            "crestUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" // want this
           },
-          "playedGames": 28,
-          "won": 26,
-          "draw": 1,
-          "lost": 1,
-          "points": 79,
-          "goalsFor": 64,
-          "goalsAgainst": 20,
-          "goalDifference": 44
+          "playedGames": 28, // want this
+          "won": 26, // want this
+          "draw": 1, // want this
+          "lost": 1, // want this
+          "points": 79, // want this
+          "goalsFor": 64, // want this
+          "goalsAgainst": 20, // want this
+          "goalDifference": 44 // want this
         },
         {
           "position": 2,
