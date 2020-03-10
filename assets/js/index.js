@@ -44,27 +44,34 @@ function dropDownOptionsInMyPage(teamNumber, teamListData) {
 
 }
 
-getData("PL", "team-list-1");
-getData("FL1", "team-list-2");
+//getData("PL", "team-list-1");
+//getData("FL1", "team-list-2");
 
 function teamStatsInMyPage(selectedTeam, teamDataId) {
 
     var team_stats_div = document.getElementById(teamDataId);
-    var league_table = _DATAGLOBAL["PL"].standings[0].table[selectedTeam];
+    var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
 
     var stats_html_string = "<p> Team Name: " +  league_table.team.name + "</p>" + "<img src=\"" + league_table.team.crestURL + "\">" + "<p> League Position: " + league_table.position + "</p>" + 
                             "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
                             "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p>";
     
     team_stats_div.innerHTML = stats_html_string;
+
+
 };
 
-$(".dropdown-item").change(function() {
-   alert ("PL")
+
+$("option").change(function() {
+
+    var leagueCode = $( "select.league-list option:checked" ).val();
+    var teamNumber = $("div").attr('id').replace(/[^d]/g, '');
+
+    getData(leagueCode, teamNumber);
    
+    // $(this).attr('id').replace(/[^d]/g, ''); https://www.sitepoint.com/jquery-numbers-element-id/
+    // var id = $("div").attr('id').replace(/button/, '') https://stackoverflow.com/questions/2427853/jquery-get-number-from-id
     // var leagueCode = ;
    // var teamNumber = ;
    // getData(leagueCode, teamNumber)
-})
-
-
+});
