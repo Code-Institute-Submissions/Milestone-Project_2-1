@@ -48,16 +48,22 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
 }
 
+function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
+    var selectedLeague = getSelectedLeague(teamNumber);
+
+    function callsDataDisplay ()  {
+        teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam);
+    }
+
+    getData(selectedLeague, teamNumber, callsDataDisplay);
+}
+
 function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
      if(teamDataId === 'team-stats-2') {
-        getData('BSA', "1", function () {
-            teamStatsInMyPage('BSA', 'team-stats-1', selectedTeam);
-        });
+         getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);
     } 
     else {
-        getData('BSA', "2", function () {
-            teamStatsInMyPage('BSA', 'team-stats-2', selectedTeam);
-        });
+        getsDataAndSetsTeamStats("2", "team-stats-2", selectedTeam);
     }
     teamStatsInMyPage(leagueCode, teamDataId, selectedTeam);
 }
@@ -98,10 +104,14 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
    // getData(leagueCode, teamNumber)
 //});
 
-function populate(v) {
-    
+function getSelectedLeague (v) {
     var myselect = document.getElementById("list-" + v);
     var league = myselect.options[myselect.selectedIndex].value;
+    return league;
+}
+
+function populate(v) {
+    var league = getSelectedLeague(v)
     getData(league, v);
 
 
