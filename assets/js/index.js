@@ -1,25 +1,29 @@
-var _DATAGLOBAL = {leagueCode:""};
+var _DATAGLOBAL = {};
 const _APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
 
-function getData(leagueCode, teamNumber) {
+function getData(leagueCode, teamNumber, callback) {
 
     
     var query = "competitions/" + leagueCode + "/standings";
 
     var xhr = new XMLHttpRequest();
+
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
             the_response = xhr.responseText;            
             var league_data = JSON.parse(the_response);
-            _DATAGLOBAL.leagueCode = league_data;
+            _DATAGLOBAL[leagueCode] = league_data;
 
-            dropDownOptionsInMyPage(teamNumber, league_data)
+            dropDownOptionsInMyPage(teamNumber, leagueCode, league_data)
             
         }
 
         else {
             console.log("This isn't working") 
+        }
+        if (callback) {
+            callback();
         }
     };
     xhr.open("GET", "https://api.football-data.org/v2/" + query);
@@ -27,7 +31,7 @@ function getData(leagueCode, teamNumber) {
     xhr.send();
 };
 
-function dropDownOptionsInMyPage(teamNumber, teamListData) {
+function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
 
@@ -37,27 +41,44 @@ function dropDownOptionsInMyPage(teamNumber, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<p class=\"dropdown-item\" onclick=\"teamStatsInMyPage("+i+", 'team-stats-" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</p>";
+        dropdown_html_string += "<p class=\"dropdown-item\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</p>";
        
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
 
 }
 
+function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
+     if(teamDataId === 'team-stats-2') {
+        getData('BSA', "1", function () {
+            teamStatsInMyPage('BSA', 'team-stats-1', selectedTeam);
+        });
+    } 
+    else {
+        getData('BSA', "2", function () {
+            teamStatsInMyPage('BSA', 'team-stats-2', selectedTeam);
+        });
+    }
+    teamStatsInMyPage(leagueCode, teamDataId, selectedTeam);
+}
+
 //getData("PL", "team-list-1");
 //getData("FL1", "team-list-2");
 
-function teamStatsInMyPage(selectedTeam, teamDataId) {
-
+function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
+    console.log(_DATAGLOBAL)
     var team_stats_div = document.getElementById(teamDataId);
-    var league_table = _DATAGLOBAL.leagueCode.standings[0].table[selectedTeam];
-
-    var stats_html_string = "<p> Team Name: " +  league_table.team.name + "</p>" + "<img src=\"" + league_table.team.crestURL + "\">" + "<p> League Position: " + league_table.position + "</p>" + 
-                            "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
+   
+    var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
+    console.log(league_table);
+    var stats_html_string = "<p> Team Name: " + league_table.team.name + "</p>" + "<p> League Position: " + league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
                             "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p>";
     
+                            console.log(stats_html_string);
+
     team_stats_div.innerHTML = stats_html_string;
 
+    //"<img src=\"" + league_table.team.crestURL + "\">" need to figure out how I can convert this
 
 };
 
@@ -82,15 +103,18 @@ function populate(v) {
     var myselect = document.getElementById("list-" + v);
     var league = myselect.options[myselect.selectedIndex].value;
     getData(league, v);
-    var i ;
-    if(v === "1") {
-        i = "2";
-    }
-    else {
-        i = "1";
-    }
-    var myselect1 = document.getElementById("list-" + i);
-    var league1 = myselect1.options[myselect1.selectedIndex].value;
-    console.log(league1);
-    getData(league1, i);
+
+
+    // console.log(league)
+    //var i ;
+    //if(v === "1") {
+     //   i = "2";
+    //}
+    //else {
+     //   i = "1";
+   // }
+   // var myselect1 = document.getElementById("list-" + i);
+   // var league1 = myselect1.options[myselect1.selectedIndex].value;
+   // console.log(league1);
+   // getData(league1, i);
 }
