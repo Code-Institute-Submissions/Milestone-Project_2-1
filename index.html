@@ -17,7 +17,7 @@
 
 <!--DROPDOWN MENUS FOR TEAM SELECTION-->
 
- <select class="league-list">
+ <select class="league-list" id="list-1" onchange="populate('1')">
         <option value="PL">English Premier League</option>
         <option value="FL1">French Ligue 1</option>
         <option value="BSA">Brazilian Serie A</option>
@@ -29,12 +29,12 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Select Team
   </button>
-  <div id="team-list-1" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="dropdownMenuButton">
   </div>
   <div id="team-stats-1"></div>
 </div>
 
-<select class="league-list">
+<select class="league-list" id="list-2" onchange="populate('2')">
         <option value="PL">English Premier League</option>
         <option value="FL1">French Ligue 1</option>
         <option value="BSA">Brazilian Serie A</option>
@@ -46,7 +46,7 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Select Team
   </button>
-  <div id="team-list-2" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="dropdownMenuButton">
   </div>
   <div id="team-stats-2"></div>
 </div>
