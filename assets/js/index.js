@@ -60,7 +60,7 @@ function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     getData(selectedLeague, teamNumber, callsDataDisplay);
 };
 
-// Function's Responsibility: To provide team match up feature based on (indexed) league position
+// Function's Responsibility: To provide team match-up feature based on (indexed) league position
 function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
      if(teamDataId === 'team-stats-2') {
          getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);

@@ -9,42 +9,54 @@
 </head>
 <body>
 
+
+
+
 <!--DROPDOWN MENUS FOR LEAGUE AND TEAM SELECTION-->
+<section class="team-match-up-feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <select class="league-list" id="list-1" onchange="populate('1')">
+                    <option value="PL">English Premier League</option>
+                    <option value="FL1">French Ligue 1</option>
+                    <option value="BSA">Brazilian Serie A</option>
+                    <option value="SA">Italian Serie A</option>
+                    <option value="PD">Spanish La Liga</option>
+                </select>
 
- <select class="league-list" id="list-1" onchange="populate('1')">
-        <option value="PL">English Premier League</option>
-        <option value="FL1">French Ligue 1</option>
-        <option value="BSA">Brazilian Serie A</option>
-        <option value="SA">Italian Serie A</option>
-        <option value="PD">Spanish La Liga</option>
-    </select>
+                <div class="dropdown team-selection-1">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select Team
+                    </button>
+                    <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="dropdownMenuButton">
+                    </div>
+                <div id="team-stats-1"></div>
+                </div>
+            </div>
 
-<div class="dropdown team-selection-1">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Team
-  </button>
-  <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="dropdownMenuButton">
-  </div>
-  <div id="team-stats-1"></div>
-</div>
+            <div class="col-md-6">
+                <select class="league-list" id="list-2" onchange="populate('2')">
+                    <option value="PL">English Premier League</option>
+                    <option value="FL1">French Ligue 1</option>
+                    <option value="BSA">Brazilian Serie A</option>
+                    <option value="SA">Italian Serie A</option>
+                    <option value="PD">Spanish La Liga</option>
+                </select>
 
-<select class="league-list" id="list-2" onchange="populate('2')">
-        <option value="PL">English Premier League</option>
-        <option value="FL1">French Ligue 1</option>
-        <option value="BSA">Brazilian Serie A</option>
-        <option value="SA">Italian Serie A</option>
-        <option value="PD">Spanish La Liga</option>
-    </select>
+            <div class="dropdown team-selection-2">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Team
+                </button>
+                <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="dropdownMenuButton">
+                </div>
+            <div id="team-stats-2"></div>
+            </div>
 
-<div class="dropdown team-selection-2">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Team
-  </button>
-  <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="dropdownMenuButton">
-  </div>
-  <div id="team-stats-2"></div>
-</div>
-
+            </div>
+        </div>
+    </div>
+</section>
 <!--SCRIPTS-->
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
