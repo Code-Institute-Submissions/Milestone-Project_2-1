@@ -60,3 +60,7 @@ potential new customers/fans
 
 Video by Kelly Lacy from Pexels: https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/
 Code for displaying video files onto html page: https://www.w3schools.com/html/html5_video.asp
+Code from StackOverlfow on additonal attributes needed for video to work, these being 'muted' as browser requirement, and 'playsinline' for mobile adaptability:
+https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5
+Video I coded along to in order to understand how I could make a header section with a video as the background:
+https://www.youtube.com/watch?v=Xy3GlrddZFI
