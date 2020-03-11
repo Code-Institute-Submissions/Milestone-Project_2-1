@@ -58,4 +58,5 @@ potential new customers/fans
 
 # Credits
 
-Video by Kelly Lacy from Pexels https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/
+Video by Kelly Lacy from Pexels: https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/
+Code for displaying video files onto html page: https://www.w3schools.com/html/html5_video.asp
