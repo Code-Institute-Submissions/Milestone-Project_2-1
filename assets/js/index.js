@@ -1,6 +1,7 @@
 var _DATAGLOBAL = {};
 const _APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
 
+// Function's Responsibility: To get data from API
 function getData(leagueCode, teamNumber, callback) {
 
     
@@ -23,6 +24,7 @@ function getData(leagueCode, teamNumber, callback) {
             console.log("This isn't working") 
         }
         if (callback) {
+            // Function's Responsibility: Callback to make other functions wait until API data is received
             callback();
         }
     };
@@ -31,12 +33,10 @@ function getData(leagueCode, teamNumber, callback) {
     xhr.send();
 };
 
+// Function's Responsibility: To supply dropdown items in the team selection dropdown menu
 function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
-
-   // var team_dropdown_div = document.getElemen("team-list-" + teamNumber);
-
     var dropdown_html_string = "";
     var table = teamListData.standings[0].table;
     for (let i in table) {
@@ -46,18 +46,21 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
 
-}
+};
 
+// Function's Responsibility: Gets the API data and passes on to function where team stats will be displayed
 function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     var selectedLeague = getSelectedLeague(teamNumber);
 
+    // Function's Responsibility:
     function callsDataDisplay ()  {
         teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam);
     }
 
     getData(selectedLeague, teamNumber, callsDataDisplay);
-}
+};
 
+// Function's Responsibility: To provide team match up feature based on (indexed) league position
 function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
      if(teamDataId === 'team-stats-2') {
          getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);
@@ -66,8 +69,9 @@ function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
         getsDataAndSetsTeamStats("2", "team-stats-2", selectedTeam);
     }
     teamStatsInMyPage(leagueCode, teamDataId, selectedTeam);
-}
+};
 
+// Function's Responsibility: To specify which team stats to display, followecby displaying these in HTML when function is called
 function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
     var team_stats_div = document.getElementById(teamDataId);
    
@@ -81,13 +85,17 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
 
 };
 
+
+// Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
 function getSelectedLeague (v) {
     var myselect = document.getElementById("list-" + v);
     var league = myselect.options[myselect.selectedIndex].value;
     return league;
-}
+};
 
+
+// Function's Responsibility: Take stored league codes and list numbers and pass them throiugh to getData function
 function populate(v) {
     var league = getSelectedLeague(v)
     getData(league, v);
-}
+};

@@ -1,7 +1,6 @@
 Roadmap
 -------
 
-
 1. 
 
 In the teamStatsInMyPage function: refactor your code :
@@ -17,4 +16,23 @@ The API key is a constant (use "const" instead of "var"), name in full uppercase
 
 3. 
 
+Make the function displaying the stats generic :
+pass in two arguments: the team and the targetted container
 
+4. 
+
+Selecting the league :
+Create a dropdown with the league codes (can be hard coded) - Gustaf comment: Not sure where these codes should be hard coded? Plus these codes don't intuitively make sense of their own for a user, are they added as an id/class in the element?
+Add an event listener to it (jquery / .change / documentation and examples there: https://www.w3schools.com/jquery/event_change.asp)
+This event listener will call the function getData() with the code you pass in.
+
+
+5. 
+
+At the end of the project: get rid of commented out code and of the console.log() (for dev only).
+
+6. 
+
+First get all the league codes (options in select)
+So that jquery change can call the API to generate the dropwdown with all the teams
+Same thing will need to be done for the team stats afterwards
