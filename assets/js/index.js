@@ -99,3 +99,6 @@ function populate(v) {
     var league = getSelectedLeague(v)
     getData(league, v);
 };
+
+populate('1');
+populate('2');
