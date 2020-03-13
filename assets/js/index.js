@@ -1,7 +1,7 @@
 var _DATAGLOBAL = {};
 const _APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
 
-// Function's Responsibility: To get data from API
+// To get data from API
 function getData(leagueCode, teamNumber, callback) {
 
     
@@ -15,16 +15,13 @@ function getData(leagueCode, teamNumber, callback) {
             the_response = xhr.responseText;            
             var league_data = JSON.parse(the_response);
             _DATAGLOBAL[leagueCode] = league_data;
-
-            dropDownOptionsInMyPage(teamNumber, leagueCode, league_data)
-            
         }
 
         else {
             console.log("This isn't working") 
         }
         if (callback) {
-            // Function's Responsibility: Callback to make other functions wait until API data is received
+            // Callback to make other functions wait until API data is received
             callback();
         }
     };
@@ -33,7 +30,7 @@ function getData(leagueCode, teamNumber, callback) {
     xhr.send();
 };
 
-// Function's Responsibility: To supply dropdown items in the team selection dropdown menu
+// To supply dropdown items in the team selection dropdown menu
 function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
@@ -41,26 +38,34 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</a>";
        
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
 
 };
 
-// Function's Responsibility: Gets the API data and passes on to function where team stats will be displayed
+function secondDropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
+
+    var table = teamListData.standings[0].table;
+    for (let i in table) {
+        
+       teamMatchUp(leagueCode, teamNumber, i)
+    }
+};
+
+// Gets the API data and passes on to function where team stats will be displayed
 function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     var selectedLeague = getSelectedLeague(teamNumber);
 
-    // Function's Responsibility:
+    // Provides callback function for displaying team stats data
     function callsDataDisplay ()  {
         teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam);
-    }
-
+    };
     getData(selectedLeague, teamNumber, callsDataDisplay);
 };
 
-// Function's Responsibility: To provide team match-up feature based on (indexed) league position
+// To provide team match-up feature based on (indexed) league position
 function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
      if(teamDataId === 'team-stats-2') {
          getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);
@@ -86,7 +91,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
 };
 
 
-// Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
+// Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
 function getSelectedLeague (v) {
     var myselect = document.getElementById("list-" + v);
     var league = myselect.options[myselect.selectedIndex].value;
@@ -94,11 +99,14 @@ function getSelectedLeague (v) {
 };
 
 
-// Function's Responsibility: Take stored league codes and list numbers and pass them throiugh to getData function
+// Take stored league codes and list numbers and pass them throiugh to getData functions
 function populate(v) {
-    var league = getSelectedLeague(v)
-    getData(league, v);
+    var left_league = getSelectedLeague("1")
+    var league_right = getSelectedLeague('2');
+    getData(left_league, v);
+    getData(league_right, v);
+    dropDownOptionsInMyPage(leagueCode, teamNumber, _DATAGLOBAL)
+    secondDropDownOptionsInMyPage(leagueCode, teamNumber, _DATAGLOBAL)
 };
 
-populate('1');
-populate('2');
+populate();
