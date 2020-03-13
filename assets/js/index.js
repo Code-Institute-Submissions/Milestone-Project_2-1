@@ -45,15 +45,6 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
 };
 
-function secondDropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
-
-    var table = teamListData.standings[0].table;
-    for (let i in table) {
-        
-       teamMatchUp(leagueCode, teamNumber, i)
-    }
-};
-
 // Gets the API data and passes on to function where team stats will be displayed
 function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     var selectedLeague = getSelectedLeague(teamNumber);
@@ -102,11 +93,12 @@ function getSelectedLeague (v) {
 // Take stored league codes and list numbers and pass them throiugh to getData functions
 function populate(v) {
     var left_league = getSelectedLeague("1")
-    var league_right = getSelectedLeague('2');
-    getData(left_league, v);
-    getData(league_right, v);
-    dropDownOptionsInMyPage(leagueCode, teamNumber, _DATAGLOBAL)
-    secondDropDownOptionsInMyPage(leagueCode, teamNumber, _DATAGLOBAL)
+    var right_league = getSelectedLeague('2');
+    function callsLeftDataDisplay() {
+        dropDownOptionsInMyPage("1", left_league, _DATAGLOBAL[left_league]);
+    };
+    getData(left_league, v, callsLeftDataDisplay);
+    getData(right_league, v);
 };
 
 populate();
