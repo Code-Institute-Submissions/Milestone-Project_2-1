@@ -64,3 +64,4 @@ Code from StackOverlfow on additonal attributes needed for video to work, these 
 https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5
 Video I coded along to in order to understand how I could make a header section with a video as the background:
 https://www.youtube.com/watch?v=Xy3GlrddZFI
+Video walkthrough to give inspiration for design on information section: https://www.youtube.com/watch?v=nuOVuLrjioM
