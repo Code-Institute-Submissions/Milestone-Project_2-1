@@ -91,9 +91,31 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
                             "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p>";
  
     team_stats_div.innerHTML = stats_html_string;
- 
+
     //"<img src=\"" + league_table.team.crestURL + "\">" need to figure out how I can convert this
- 
+        teamStatsGraphs(league_table, teamDataId, selectedTeam)
+}
+
+function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam) {
+    var games_chart_1 = document.getElementById("games-chart-1").getContext("2d");
+    var myPieChart = new Chart(games_chart_1, {
+    type: 'pie',
+    data: {
+        labels: ['Won', 'Drawn', 'Lost'],
+        datasets: [{
+            label: 'Number of Games',
+            data: [leagueTable.won, leagueTable.draw, leagueTable.lost],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ]
+        }]
+    },
+    options: {
+        cutoutpercentage: 0
+    }
+});
 }
  
 // Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
@@ -110,6 +132,6 @@ function populate(v) {
     getData(league, v);
 }
 
-populate('1');
-populate('2');
+//populate('1');
+//populate('2');
 
