@@ -40,9 +40,10 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
     if(league_selection_1 === league_selection_2) {
         alert("Please choose another league")
-        var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
-        team_dropdown_div.innerHTML = ""
-
+        var team_dropdown_div_1 = document.getElementById("team-list-1");
+        var team_dropdown_div_2 = document.getElementById("team-list-2");
+        team_dropdown_div_1.innerHTML = ""
+        team_dropdown_div_2.innerHTML = ""
     }
 
     else {
@@ -51,7 +52,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</a>";
        
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
