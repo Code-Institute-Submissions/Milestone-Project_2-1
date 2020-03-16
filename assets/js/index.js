@@ -45,6 +45,14 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
         team_dropdown_div_1.innerHTML = ""
         team_dropdown_div_2.innerHTML = ""
     }
+    // Attempting to fix user feedback so that users must choose a league in both dropdowns
+    else if(league_selection_1 === placeholder && league_selection_2 === placeholder) {
+        alert("Please select a league in both league dropdown menus")
+        var team_dropdown_div_1 = document.getElementById("team-list-1");
+        var team_dropdown_div_2 = document.getElementById("team-list-2");
+        team_dropdown_div_1.innerHTML = ""
+        team_dropdown_div_2.innerHTML = ""
+    }
 
     else {
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
@@ -98,6 +106,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
 
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam) {
     var games_chart_1 = document.getElementById("games-chart-1").getContext("2d");
+    console.log(selectedTeam)
     var myPieChart = new Chart(games_chart_1, {
     type: 'pie',
     data: {
