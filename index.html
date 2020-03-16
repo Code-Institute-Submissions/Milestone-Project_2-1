@@ -22,7 +22,7 @@
         <div class="header-content">
             <h1>One More Team</h1>
             <p>Follow more football, wherever you are</p>
-            <a href="#" class="btn">Start finding one more team</a>
+            <a href="#" class="btn">Get Started</a>
         </div>
     </div>
 </header>
@@ -66,8 +66,9 @@
 <section class="team-match-up-feature">
     <div class="container match-up-feature">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-6">
                 <select class="league-list" id="list-1" onchange="populate('1')">
+                    <option value="placeholder" selected disabled>Select League</option>
                     <option value="PL">English Premier League</option>
                     <option value="FL1">French Ligue 1</option>
                     <option value="SA">Italian Serie A</option>
@@ -81,13 +82,16 @@
                     <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="dropdownMenuButton">
                     </div>
                 <div id="team-stats-1"></div>
+                <canvas id="games-chart-1" width="400" height="400"></canvas>
+                <canvas id="goals-chart-1" width="400" height="400"></canvas>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-6">
                 <select class="league-list" id="list-2" onchange="populate('2')">
-                    <option value="PL">English Premier League</option>
+                    <option value="placeholder" selected disabled>Select League</option>
                     <option value="FL1">French Ligue 1</option>
+                    <option value="PL">English Premier League</option>
                     <option value="SA">Italian Serie A</option>
                     <option value="PD">Spanish La Liga</option>
                 </select>
@@ -99,10 +103,14 @@
                 <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="dropdownMenuButton">
                 </div>
                 <div id="team-stats-2"></div>
+                <div id="test"></div>
+                <canvas id="games-chart-2" width="400" height="400"></canvas>
+                <canvas id="goals-chart-2" width="400" height="400"></canvas>
             </div>
         </div>
         </div>
     </div>
+    
 </section>
 
 
@@ -114,6 +122,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script src="assets/js/index.js"></script> 
 </body>
 </html>
