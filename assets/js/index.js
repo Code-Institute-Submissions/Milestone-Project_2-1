@@ -32,21 +32,6 @@ function getData(leagueCode, teamNumber, callback) {
  
 // Function's Responsibility: To supply dropdown items in the team selection dropdown menu
 function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
-
-    var league_list_1 = document.getElementById("list-1");
-    var league_list_2 = document.getElementById("list-2");
-    var league_selection_1 = league_list_1.options[league_list_1.selectedIndex].value
-    var league_selection_2 = league_list_2.options[league_list_2.selectedIndex].value
-
-    if(league_selection_1 === league_selection_2) {
-        alert("Please choose another league")
-        var team_dropdown_div_1 = document.getElementById("team-list-1");
-        var team_dropdown_div_2 = document.getElementById("team-list-2");
-        team_dropdown_div_1.innerHTML = ""
-        team_dropdown_div_2.innerHTML = ""
-    }
-
-    else {
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
     var dropdown_html_string = "";
     var table = teamListData.standings[0].table;
@@ -55,7 +40,6 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
         dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
-    }
 }
  
 // Function's Responsibility: Gets the API data and passes on to function where team stats will be displayed
@@ -101,6 +85,9 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 function getSelectedLeague (v) {
     var my_select = document.getElementById("list-" + v);
     var league = my_select.options[my_select.selectedIndex].value;
+    if(typeof my_select !== 'undefined') {
+        
+    }
     return league;
 }
  
