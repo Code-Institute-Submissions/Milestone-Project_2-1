@@ -98,10 +98,11 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 }
 
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
+    if(myPieChart) {
+        myPieChart.destroy();
+        }
     var target = "games-chart-" + teamNumber;
     var games_chart = document.getElementById(target).getContext('2d');
-    if(myPieChart != undefined) {
-        myPieChart.destroy();
         var myPieChart = new Chart(games_chart, {
         type: 'pie',
         data: {
@@ -117,10 +118,15 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
         }]
     },
     options: {
-        cutoutpercentage: 0
+        cutoutpercentage: 0,
+        responsive: true,
+        title: {
+            display: true,
+            text: '' +leagueTable.team.name+ ''
+        } 
     }
 });
-}
+
 }
  
 // Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
