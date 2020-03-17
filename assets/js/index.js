@@ -85,9 +85,6 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 function getSelectedLeague (v) {
     var my_select = document.getElementById("list-" + v);
     var league = my_select.options[my_select.selectedIndex].value;
-    if(typeof my_select !== 'undefined') {
-        
-    }
     return league;
 }
  
@@ -99,22 +96,27 @@ function populate(v) {
 }
 
 
-//function leagueListFill(side, removeLeague) {
-   // for (let i in table) {
+//function leagueListPreventDuplicate(selectedLeague, otherLeague, removedOption) {
+    
+   // var selected_league = document.getElementById("list-" + selectedLeague);
+   // var selected_league_value = selected_league.options[selected_league_list.selectedIndex].value;
 
-      //  if removeLeague == currentLeagueInTheFor
-        //    skip
-        
-       // else{
-       // dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+   // for (let i in selected_league_list) {
+
+   //     if(removedLeague === selected_league_value) {
+   //       continue
    //     }
- //   }
- //   team_dropdown_div.innerHTML = dropdown_html_string;
+           
+  //      else{
+   //     dropdown_html_string += 
+   //     }
+  //  }
+  // league_list_select.innerHTML = dropdown_html_string;
 //}
 
 
-//leagueListFill('1', 'french ligue')
-//leagueListFill('2', 'english league')
+//leagueListPreventDuplicate('1', '2', 'FL1')
+//leagueListPreventDuplicate('2', '1', 'PL')
 
 populate('1');
 populate('2');
