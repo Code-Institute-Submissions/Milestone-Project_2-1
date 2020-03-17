@@ -99,10 +99,12 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
     var target = "games-chart-" + teamNumber;
-    var games_chart = document.getElementById(target);
-    var myPieChart = new Chart(games_chart, {
-    type: 'pie',
-    data: {
+    var games_chart = document.getElementById(target).getContext('2d');
+    if(myPieChart != undefined) {
+        myPieChart.destroy();
+        var myPieChart = new Chart(games_chart, {
+        type: 'pie',
+        data: {
         labels: ['Won', 'Drawn', 'Lost'],
         datasets: [{
             label: 'Number of Games',
@@ -119,6 +121,7 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
     }
 });
 }
+}
  
 // Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
 function getSelectedLeague (v) {
@@ -133,6 +136,24 @@ function populate(v) {
     var league = getSelectedLeague(v)
     getData(league, v);
 }
+
+
+//function leagueListFill(side, removeLeague) {
+   // for (let i in table) {
+
+      //  if removeLeague == currentLeagueInTheFor
+        //    skip
+        
+       // else{
+       // dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+   //     }
+ //   }
+ //   team_dropdown_div.innerHTML = dropdown_html_string;
+//}
+
+
+//leagueListFill('1', 'french ligue')
+//leagueListFill('2', 'english league')
 
 populate('1');
 populate('2');
