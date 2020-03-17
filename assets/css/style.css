@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-size: 1rem;
@@ -111,6 +115,7 @@ body {
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0,0,0,.1);
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .info-box .box:before {
@@ -170,4 +175,26 @@ body {
     z-index: 2;
     color: #555;
     transition: 0.5s;
+}
+
+/* Team Match-Up Section */
+
+.team-match-up-feature {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#ffdb58, #ffdb58 50%, #fff 50%, #fff
+    100%);
+}
+
+#games-chart-1 {
+    float: left;
+}
+
+#games-chart-2 {
+    float: right;
 }
