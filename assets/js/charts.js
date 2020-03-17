@@ -1,10 +1,11 @@
+var myPieChart = {};
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
-    if(myPieChart) {
-        myPieChart.destroy();
-        }
+    if (typeof myPieChart[teamNumber] !== "undefined") {
+        myPieChart[teamNumber].destroy();
+      }
     var target = "games-chart-" + teamNumber;
     var games_chart = document.getElementById(target).getContext('2d');
-        var myPieChart = new Chart(games_chart, {
+        myPieChart[teamNumber] = new Chart(games_chart, {
         type: 'pie',
         data: {
         labels: ['Won', 'Drawn', 'Lost'],
@@ -27,5 +28,4 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
         } 
     }
 });
-
 }
