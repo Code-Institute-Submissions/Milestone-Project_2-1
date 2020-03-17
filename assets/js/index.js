@@ -17,12 +17,12 @@ function getData(leagueCode, teamNumber, callback) {
             _DATAGLOBAL[leagueCode] = league_data;
  
             dropDownOptionsInMyPage(teamNumber, leagueCode, league_data);
+         
             
-        }
-        
-        if (callback) {
-            // Function's Responsibility: Callback to make other functions wait until API data is received
-            callback();
+             if (callback) {
+                // Function's Responsibility: Callback to make other functions wait until API data is received
+                callback();
+            }
         }
     };
     xhr.open("GET", "https://api.football-data.org/v2/" + query);
@@ -45,14 +45,6 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
         team_dropdown_div_1.innerHTML = ""
         team_dropdown_div_2.innerHTML = ""
     }
-    // Attempting to fix user feedback so that users must choose a league in both dropdowns
-    else if(league_selection_1 === placeholder && league_selection_2 === placeholder) {
-        alert("Please select a league in both league dropdown menus")
-        var team_dropdown_div_1 = document.getElementById("team-list-1");
-        var team_dropdown_div_2 = document.getElementById("team-list-2");
-        team_dropdown_div_1.innerHTML = ""
-        team_dropdown_div_2.innerHTML = ""
-    }
 
     else {
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
@@ -60,8 +52,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "'," + i + ")\">"  + table[i]["team"]["name"] + "</a>";
-       
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
     }
@@ -73,25 +64,26 @@ function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
  
     // Function's Responsibility:
     function callsDataDisplay ()  {
-        teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam);
+        teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam, teamNumber);
     }
  
     getData(selectedLeague, teamNumber, callsDataDisplay);
 }
  
 // Function's Responsibility: To provide team match-up feature based on (indexed) league position
-function teamMatchUp (leagueCode, teamDataId, selectedTeam) {
-     if(teamDataId === 'team-stats-2') {
+function teamMatchUp (leagueCode, teamDataId, selectedTeam, teamNumber) {
+    console.log(teamDataId);
+    if(teamDataId === 'team-stats-2') {
          getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);
     } 
     else {
         getsDataAndSetsTeamStats("2", "team-stats-2", selectedTeam);
     }
-    teamStatsInMyPage(leagueCode, teamDataId, selectedTeam);
+    teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber);
 }
  
 // Function's Responsibility: To specify which team stats to display, followecby displaying these in HTML when function is called
-function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
+function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var team_stats_div = document.getElementById(teamDataId);
    
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
@@ -101,13 +93,14 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam) {
     team_stats_div.innerHTML = stats_html_string;
 
     //"<img src=\"" + league_table.team.crestURL + "\">" need to figure out how I can convert this
-        teamStatsGraphs(league_table, teamDataId, selectedTeam)
+    console.log('aaaa')
+        teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber)
 }
 
-function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam) {
-    var games_chart_1 = document.getElementById("games-chart-1").getContext("2d");
-    console.log(selectedTeam)
-    var myPieChart = new Chart(games_chart_1, {
+function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
+    var target = "games-chart-" + teamNumber;
+    var games_chart = document.getElementById(target);
+    var myPieChart = new Chart(games_chart, {
     type: 'pie',
     data: {
         labels: ['Won', 'Drawn', 'Lost'],
@@ -141,6 +134,6 @@ function populate(v) {
     getData(league, v);
 }
 
-//populate('1');
-//populate('2');
+populate('1');
+populate('2');
 
