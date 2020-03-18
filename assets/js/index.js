@@ -96,27 +96,22 @@ function populate(v) {
 }
 
 
-//function leagueListPreventDuplicate(selectedLeague, otherLeague, removedOption) {
+function leagueListPreventDuplicate(selectedLeague, removedOption) {
     
-   // var selected_league = document.getElementById("list-" + selectedLeague);
-   // var selected_league_value = selected_league.options[selected_league_list.selectedIndex].value;
+    var selected_league = document.getElementById("list-" + selectedLeague);
+    var selected_league_value = selected_league.options[selected_league.selectedIndex].value;
 
-   // for (let i in selected_league_list) {
+    for (let i in selected_league) {
 
-   //     if(removedLeague === selected_league_value) {
-   //       continue
-   //     }
-           
-  //      else{
-   //     dropdown_html_string += 
-   //     }
-  //  }
-  // league_list_select.innerHTML = dropdown_html_string;
-//}
+        if(removedOption === selected_league_value) {
+          continue
+        }
+}
+}
 
 
-//leagueListPreventDuplicate('1', '2', 'FL1')
-//leagueListPreventDuplicate('2', '1', 'PL')
+leagueListPreventDuplicate('1', 'FL1')
+leagueListPreventDuplicate('2', 'PL')
 
 populate('1');
 populate('2');

@@ -67,12 +67,14 @@
     <div class="container-fluid match-up-feature">
         <div class="row">
             <div class="col-md-6">
-                <select class="league-list" id="list-1" onchange="populate('1')">
-                    <option value="PL">English Premier League</option>
-                    <option value="FL1">French Ligue 1</option>
-                    <option value="SA">Italian Serie A</option>
-                    <option value="PD">Spanish La Liga</option>
-                </select>
+                <div class="select-box">
+                    <select class="league-list" id="list-1" onchange="populate('1')">
+                        <option value="PL">English Premier League</option>
+                        <option value="FL1">French Ligue 1</option>
+                        <option value="SA">Italian Serie A</option>
+                        <option value="PD">Spanish La Liga</option>
+                    </select>
+                </div>
 
                 <div class="dropdown team-selection-1">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,13 +93,14 @@
             </div>
 
             <div class="col-md-6">
-                <select class="league-list" id="list-2" onchange="populate('2')">
-                    <option value="FL1">French Ligue 1</option>
-                    <option value="PL">English Premier League</option>
-                    <option value="SA">Italian Serie A</option>
-                    <option value="PD">Spanish La Liga</option>
-                </select>
-                
+                <div class="select-box">
+                    <select class="league-list" id="list-2" onchange="populate('2')">
+                        <option value="FL1">French Ligue 1</option>
+                        <option value="PL">English Premier League</option>
+                        <option value="SA">Italian Serie A</option>
+                        <option value="PD">Spanish La Liga</option>
+                    </select>
+                </div>
                 <div class="dropdown team-selection-2">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Team
@@ -117,9 +120,7 @@
     </div>
     
 </section>
-<section class="team-stats-graphs">
-        
-</section>
+
 <footer>
 
 </footer>

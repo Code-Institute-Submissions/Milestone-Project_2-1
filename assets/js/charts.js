@@ -22,10 +22,19 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
     options: {
         cutoutpercentage: 0,
         responsive: true,
+        maintainAsepctRatio: true,
         title: {
             display: true,
-            text: '' +leagueTable.team.name+ ''
-        } 
+            text: '' +leagueTable.team.name+ '',
+            fontSize: 14,
+        },
+        legend: {
+            fullWidth: false,
+            position: 'right',
+            labels: {
+                fontSize: 14,
+            }
+        }
     }
 });
 }
