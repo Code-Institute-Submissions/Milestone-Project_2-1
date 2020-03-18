@@ -73,11 +73,14 @@ body {
 }
 
 .btn {
-    background: #ffdb58;
+    background: #0C4A60;
     color: #fff;
     font-size: 1.2rem;
     padding: 1rem 2rem;
     text-decoration: none;
+    margin: 10px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
 @media(max-width:960px) {
@@ -97,7 +100,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    background: linear-gradient(#ffdb58, #ffdb58 50%, #fff 50%, #fff
+    background: linear-gradient(#ABDFF1, #ABDFF1 50%, #E1DDDB 50%, #E1DDDB
     100%);
 }
 
@@ -115,7 +118,9 @@ body {
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0,0,0,.1);
     border-radius: 20px;
+    margin-left: 20px;
     margin-bottom: 40px;
+    margin-right: 20px;
 }
 
 .info-box .box:before {
@@ -188,7 +193,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    background: linear-gradient(#ffdb58, #ffdb58 50%, #fff 50%, #fff
+    background: linear-gradient(#EF6C33, #EF6C33 50%, #fff 50%, #fff
     100%);
 }
 
@@ -201,7 +206,7 @@ body {
 }
 
 .league-list {
-    background: #0563af;
+    background: #0C4A60;
     color: #fff;
     padding: 10px;
     margin: 10px;
@@ -210,4 +215,6 @@ body {
     border: none;
     font-size: 20px;
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    -webkit-appearance: button;
+    outline: none;
 }

@@ -37,7 +37,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#test\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
 }
@@ -71,8 +71,8 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var team_stats_div = document.getElementById(teamDataId);
    
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
-    var stats_html_string = "<p> Team Name: " + league_table.team.name + "</p>" + "<p> League Position: " + league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
-                            "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p>";
+    var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" + "<p> League Position: " + league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
+                            "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p></div></div>";
  
     team_stats_div.innerHTML = stats_html_string;
 
@@ -99,20 +99,18 @@ function populate(v) {
 function leagueListPreventDuplicate(selectedLeague, removedOption) {
     
     var selected_league = document.getElementById("list-" + selectedLeague);
-    var selected_league_value = selected_league.options[selected_league.selectedIndex].value;
-
+    console.log(selected_league);
+    console.log(removedOption)
     for (let i in selected_league) {
 
-        if(removedOption === selected_league_value) {
+        if(removedOption === i) {
           continue
         }
 }
 }
-
 
 leagueListPreventDuplicate('1', 'FL1')
 leagueListPreventDuplicate('2', 'PL')
 
 populate('1');
 populate('2');
-
