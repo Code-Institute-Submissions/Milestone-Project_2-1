@@ -193,7 +193,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    background: linear-gradient(#EF6C33, #EF6C33 50%, #fff 50%, #fff
+    background: linear-gradient(#EF6C33, #EF6C33 50%, #E1DDDB 50%, #E1DDDB
     100%);
 }
 
@@ -217,4 +217,9 @@ body {
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
     -webkit-appearance: button;
     outline: none;
+}
+
+img {
+    width: 80px;
+    height: 80px;
 }

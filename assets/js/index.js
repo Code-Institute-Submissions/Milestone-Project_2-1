@@ -71,13 +71,15 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var team_stats_div = document.getElementById(teamDataId);
    
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
-    var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" + "<p> League Position: " + league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won + "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
-                            "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " + league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p></div></div>";
+    var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
+    "<img src=\"" + league_table.team.crestUrl + "\" alt=\"Club crest of" + league_table.team.name + "\">" + "<p> League Position: " +
+    league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
+    "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
+    "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +
+    league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p></div></div>";
  
     team_stats_div.innerHTML = stats_html_string;
 
-    //"<img src=\"" + league_table.team.crestURL + "\">" need to figure out how I can convert this
-    console.log('aaaa')
         teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber)
 }
  
