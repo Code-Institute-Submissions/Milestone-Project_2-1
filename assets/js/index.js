@@ -40,7 +40,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#stats-card\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
     team_dropdown_div.innerHTML = dropdown_html_string;
 }
@@ -59,29 +59,31 @@ function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
  
 // Function's Responsibility: To provide team match-up feature based on (indexed) league position
 function teamMatchUp (leagueCode, teamDataId, selectedTeam, teamNumber) {
-    console.log(teamDataId);
+
     if(teamDataId === 'team-stats-2') {
          getsDataAndSetsTeamStats("1", "team-stats-1", selectedTeam);
     } 
     else {
         getsDataAndSetsTeamStats("2", "team-stats-2", selectedTeam);
     }
+
     teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber);
 
 }
  
 // Function's Responsibility: To specify which team stats to display, followecby displaying these in HTML when function is called
 function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
+
     var team_stats_div = document.getElementById(teamDataId);
-   
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
-    var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
+
+    var stats_html_string = "<div class=\"card\" id=\"stats-card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
     "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of" + league_table.team.name + "\">" + "<p> League Position: " +
     league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
     "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
     "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +
     league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p></div></div>";
- 
+
     team_stats_div.innerHTML = stats_html_string;
 
     teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber)

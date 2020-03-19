@@ -1,8 +1,10 @@
 var myPieChart = {};
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
+
     if (typeof myPieChart[teamNumber] !== "undefined") {
         myPieChart[teamNumber].destroy();
       }
+
     var target = "games-chart-" + teamNumber;
     var games_chart = document.getElementById(target).getContext('2d');
         myPieChart[teamNumber] = new Chart(games_chart, {
@@ -37,4 +39,5 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
         }
     }
 });
+
 }
