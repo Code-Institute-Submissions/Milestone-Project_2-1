@@ -14,6 +14,7 @@ body {
     line-height: 1.5;
     color: #333;
     overflow-x: hidden;
+    text-align: center;
 }
 
 /* Header Section */
@@ -109,6 +110,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .info-box .box {
@@ -121,6 +123,7 @@ body {
     margin-left: 20px;
     margin-bottom: 40px;
     margin-right: 20px;
+    margin-top: 40px;
 }
 
 .info-box .box:before {
@@ -209,7 +212,6 @@ body {
     background: #0C4A60;
     color: #fff;
     padding: 10px;
-    margin: 10px;
     width: 250px;
     height: 50px;
     border: none;
@@ -217,9 +219,21 @@ body {
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
     -webkit-appearance: button;
     outline: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 img {
-    width: 80px;
+    width: 60px;
     height: 80px;
 }
+
+.card {
+    box-shadow: 0 15px 45px rgba(0,0,0,.1);
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
