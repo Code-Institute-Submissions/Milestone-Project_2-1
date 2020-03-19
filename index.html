@@ -65,32 +65,30 @@
 <!--DROPDOWN MENUS FOR LEAGUE AND TEAM SELECTION-->
 <section class="team-match-up-feature">
     <div class="container-fluid match-up-feature">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="box">
                     <select class="league-list" id="list-1" onchange="populate('1')">
                         <option value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
                         <option value="SA">Italian Serie A</option>
                         <option value="PD">Spanish La Liga</option>
                     </select>
-                </div>
                 <div class="dropdown team-selection-1">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" id="firstDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Select Team
                     </button>
-                    <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="dropdownMenuButton">
+                    <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="firstDropdownMenuButton">
                     </div>
-                <div id="team-stats-1"></div>
+                <div class="team-stats-div" id="team-stats-1"></div>
                 <!--<canvas id="goals-chart-1" width="100%" height="300"></canvas> -->
                 </div>
             <div class="card">
                 <div class="card-body">
-                <canvas id="games-chart-1"></canvas>
+                    <canvas id="games-chart-1"></canvas>
                 </div>
             </div>
-            </div>
-
+        </div>
+        
             <div class="col-md-6">
                     <select class="league-list" id="list-2" onchange="populate('2')">
                         <option value="FL1">French Ligue 1</option>
@@ -100,22 +98,22 @@
                     </select>
                     
                 <div class="dropdown team-selection-2">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" id="secondDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Team
                 </button>
-                <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="dropdownMenuButton">
+                <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="secondDropdownMenuButton">
                 </div>
-                <div id="team-stats-2"></div>
+                <div class="team-stats-div" id="team-stats-2"></div>
                 <!--<canvas id="goals-chart-2" width="100%" height="300"></canvas> -->
             </div>
             <div class="card">
                 <div class="card-body">
-                <canvas id="games-chart-2"></canvas>
+                    <canvas id="games-chart-2"></canvas>
                 </div>
             </div>
         </div>
+         </div>
         </div>
-    </div>
     
 </section>
 
