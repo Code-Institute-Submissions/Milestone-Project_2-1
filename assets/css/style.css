@@ -79,7 +79,7 @@ body {
     font-size: 1.2rem;
     padding: 1rem 2rem;
     text-decoration: none;
-    margin: 10px;
+    margin: 40px;
     border: none;
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
@@ -103,6 +103,13 @@ body {
     align-items: center;
     background: linear-gradient(#ABDFF1, #ABDFF1 50%, #E1DDDB 50%, #E1DDDB
     100%);
+}
+
+.info-heading {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 .info-box {
@@ -226,6 +233,18 @@ body {
 img {
     width: 80px;
     height: 80px;
+}
+
+.match-up-heading {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    background: rgba(88, 87, 87, 0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.match-up-heading h2 {
+    color: #fff;
 }
 
 .card {
