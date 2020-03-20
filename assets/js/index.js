@@ -120,35 +120,39 @@ function populate(v) {
     getData(league, v);
 }
 
-// Below function attempting to fix user feedback with this function for league lists
-// Aiming to pass 2 arguments, selected league and the value of the option to be removed in second dropdown
-// Theorizing that if select value == option to remove (value), continue and append options except the one skipped
-function leagueListPreventDuplicate(selectedLeague, removedOption) {
-    
-    var selected_league = document.getElementById("list-" + selectedLeague);
-    console.log(selected_league);
-    console.log(removedOption)
-    for (let i in selected_league) {
-
-        if(removedOption === i) {
-          continue
-        }
-}
-}
-
 // To hide the team-stats and graphs as soon as the page has loaded
 $( ".chart-container, .team-stats-div" ).hide();
 
 // Anmimation and hiding stats and graphs when league selection changes
-$ ( "select" ).change(function() {
+$( "select" ).change(function() {
     $( ".chart-container, .team-stats-div" ).slideUp( "slow", function() {
         $( ".chart-container, .team-stats-div" ).hide()
     });
 })
 
-//leagueListPreventDuplicate('1', 'FL1')
-//leagueListPreventDuplicate('2', 'PL')
+// Following code ensures that users cannot choose the same league in both league dropdowns
+document.getElementById("list-1").addEventListener("change", function(e) {
+    let i = e.target.options.selectedIndex;
+    document.getElementById("list-2")[i].setAttribute("disabled", true);
+});
+document.getElementById("list-1").addEventListener("click", function(e) {
+    for (let i of document.getElementById("list-2")) {
+        i.removeAttribute("disabled");
+    }
+});
+document.getElementById("list-2").addEventListener("change", function(e) {
+    let i = e.target.options.selectedIndex;
+    document.getElementById("list-1")[i].setAttribute("disabled", true);
+});
+document.getElementById("list-2").addEventListener("click", function(e) {
+    for (let i of document.getElementById("list-1")) {
+        i.removeAttribute("disabled");
+    }
+});
+
+$( "" )
 
 // This onchange function called twice for both league dropdowns to load default team dropdown items
 populate('1');
 populate('2');
+
