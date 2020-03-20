@@ -26,7 +26,17 @@ function getData(leagueCode, teamNumber, callback) {
         }
     };
     xhr.onerror = function() {
-        alert("Too many api calls, wait 1 min")
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+            modal.style.display = "none";
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        }
     };
     xhr.open("GET", "https://api.football-data.org/v2/" + query);
     xhr.setRequestHeader("X-Auth-Token", _APIKEY);
