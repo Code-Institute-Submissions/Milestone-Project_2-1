@@ -1,7 +1,7 @@
 var _DATAGLOBAL = {};
 const _APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
  
-// Function's Responsibility: To get data from API
+// Requests and obtains data from API
 function getData(leagueCode, teamNumber, callback) {
  
     
@@ -20,7 +20,7 @@ function getData(leagueCode, teamNumber, callback) {
          
             
              if (callback) {
-                // Function's Responsibility: Callback to make other functions wait until API data is received
+                // Callback to make sure other functions wait until API data is received
                 callback();
             }
         }
@@ -33,7 +33,7 @@ function getData(leagueCode, teamNumber, callback) {
     xhr.send();
 }
  
-// Function's Responsibility: To supply dropdown items in the team selection dropdown menu
+// Supplies dropdown items in the team selection dropdown menu
 function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
@@ -52,11 +52,11 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
 
 }
  
-// Function's Responsibility: Gets the API data and passes on to function where team stats will be displayed
+// Gets the API data and passes on to function where team stats will be displayed
 function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     var selectedLeague = getSelectedLeague(teamNumber);
  
-    // Function's Responsibility:
+    // Provides callback function, ensuring the script waits until API data is received before resuming
     function callsDataDisplay ()  {
         teamStatsInMyPage(selectedLeague, statsDiv, selectedTeam, teamNumber);
     }
@@ -64,7 +64,7 @@ function getsDataAndSetsTeamStats (teamNumber, statsDiv, selectedTeam) {
     getData(selectedLeague, teamNumber, callsDataDisplay);
 }
  
-// Function's Responsibility: To provide team match-up feature based on (indexed) league position
+// Provides team match-up feature based on (indexed) league position
 function teamMatchUp (leagueCode, teamDataId, selectedTeam, teamNumber) {
 
     if(teamDataId === 'team-stats-2') {
@@ -78,7 +78,7 @@ function teamMatchUp (leagueCode, teamDataId, selectedTeam, teamNumber) {
 
 }
  
-// Function's Responsibility: To specify which team stats to display, followecby displaying these in HTML when function is called
+// Specifies which team stats to display, followed by displaying these in HTML when function is called
 function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 
     var team_stats_div = document.getElementById(teamDataId);
@@ -96,7 +96,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber)
 }
  
-// Function's Responsibility: Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
+// Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
 function getSelectedLeague (v) {
     var my_select = document.getElementById("list-" + v);
     var league = my_select.options[my_select.selectedIndex].value;
@@ -104,7 +104,7 @@ function getSelectedLeague (v) {
 }
  
  
-// Function's Responsibility: Take stored league codes and list numbers and pass them throiugh to getData function
+// Take stored league codes and list numbers and pass them throiugh to getData function
 function populate(v) {
     var league = getSelectedLeague(v)
     getData(league, v);
@@ -126,10 +126,19 @@ function leagueListPreventDuplicate(selectedLeague, removedOption) {
 }
 }
 
+// To hide the team-stats and graphs as soon as the page has loaded
 $( ".chart-container, .team-stats-div" ).hide();
 
-leagueListPreventDuplicate('1', 'FL1')
-leagueListPreventDuplicate('2', 'PL')
+// Anmimation and hiding stats and graphs when league selection changes
+$ ( "select" ).change(function() {
+    $( ".chart-container, .team-stats-div" ).slideUp( "slow", function() {
+        $( ".chart-container, .team-stats-div" ).hide()
+    });
+})
 
+//leagueListPreventDuplicate('1', 'FL1')
+//leagueListPreventDuplicate('2', 'PL')
+
+// This onchange function called twice for both league dropdowns to load default team dropdown items
 populate('1');
 populate('2');

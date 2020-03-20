@@ -1,4 +1,6 @@
 var myPieChart = {};
+
+// Generates pie charts for number of games won, drawn and lost
 function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
 
     if (typeof myPieChart[teamNumber] !== "undefined") {
