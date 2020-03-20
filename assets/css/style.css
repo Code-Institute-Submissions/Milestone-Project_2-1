@@ -117,7 +117,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+    text-align: left;
 }
 
 .info-box .box {
@@ -180,12 +180,17 @@ body {
 }
 
 .info-box .box:hover h3,
-.info-box .box:hover p
+.info-box .box:hover p,
+.info-box .box:hover ul li,
+.info-box .box:hover ol li
 {
     color: #fff;
 }
 
-.info-box .box p {
+.info-box .box p,
+.info-box .box ol,
+.info-box .box ul
+{
     position: relative;
     z-index: 2;
     color: #555;
@@ -238,7 +243,6 @@ img {
 .match-up-heading {
     margin-top: 80px;
     margin-bottom: 20px;
-    background: rgba(88, 87, 87, 0.7);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -258,4 +262,8 @@ img {
 
 #club-crest {
     margin: 10px 10px 10px 10px;
+}
+
+.btn-secondary {
+    background: #106786;
 }
