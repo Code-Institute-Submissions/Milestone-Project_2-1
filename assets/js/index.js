@@ -25,19 +25,20 @@ function getData(leagueCode, teamNumber, callback) {
             }
         }
     };
+
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
     xhr.onerror = function() {
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
         modal.style.display = "block";
+    };
         span.onclick = function() {
             modal.style.display = "none";
+        };
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 }
-            }
-        }
-    };
+            };
     xhr.open("GET", "https://api.football-data.org/v2/" + query);
     xhr.setRequestHeader("X-Auth-Token", _APIKEY);
     xhr.send();
@@ -57,7 +58,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     team_dropdown_div.innerHTML = dropdown_html_string;
         
     $(".dropdown-item").click(function() {
-        $(".chart-container, .team-stats-div").slideDown( "slow" )
+        $(".chart-container, .team-stats-div").slideDown( "slow" );
     });
 
 }
@@ -103,7 +104,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 
     team_stats_div.innerHTML = stats_html_string;
 
-    teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber)
+    teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber);
 }
  
 // Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
@@ -116,7 +117,7 @@ function getSelectedLeague (v) {
  
 // Take stored league codes and list numbers and pass them throiugh to getData function
 function populate(v) {
-    var league = getSelectedLeague(v)
+    var league = getSelectedLeague(v);
     getData(league, v);
 }
 
@@ -126,9 +127,9 @@ $( ".chart-container, .team-stats-div" ).hide();
 // Anmimation and hiding stats and graphs when league selection changes
 $( "select" ).change(function() {
     $( ".chart-container, .team-stats-div" ).slideUp( "slow", function() {
-        $( ".chart-container, .team-stats-div" ).hide()
+        $( ".chart-container, .team-stats-div" ).hide();
     });
-})
+});
 
 // Following code ensures that users cannot choose the same league in both league dropdowns
 document.getElementById("list-1").addEventListener("change", function(e) {
@@ -150,7 +151,10 @@ document.getElementById("list-2").addEventListener("click", function(e) {
     }
 });
 
-$( "" )
+// Initiates Bootstrap tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 // This onchange function called twice for both league dropdowns to load default team dropdown items
 populate('1');
