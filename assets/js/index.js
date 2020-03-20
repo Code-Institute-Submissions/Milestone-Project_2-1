@@ -35,14 +35,21 @@ function getData(leagueCode, teamNumber, callback) {
  
 // Function's Responsibility: To supply dropdown items in the team selection dropdown menu
 function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
+
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
     var dropdown_html_string = "";
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#stats-card\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#games-chart-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
+    
     team_dropdown_div.innerHTML = dropdown_html_string;
+        
+    $(".dropdown-item").click(function() {
+        $(".chart-container, .team-stats-div").slideDown( "slow" )
+    });
+
 }
  
 // Function's Responsibility: Gets the API data and passes on to function where team stats will be displayed
@@ -77,8 +84,8 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var team_stats_div = document.getElementById(teamDataId);
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
 
-    var stats_html_string = "<div class=\"card\" id=\"stats-card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
-    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of" + league_table.team.name + "\">" + "<p> League Position: " +
+    var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
+    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of" + league_table.team.name + "\" id=\"club-crest\">" + "<p> League Position: " +
     league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
     "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
     "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +
@@ -118,6 +125,8 @@ function leagueListPreventDuplicate(selectedLeague, removedOption) {
         }
 }
 }
+
+$( ".chart-container, .team-stats-div" ).hide();
 
 leagueListPreventDuplicate('1', 'FL1')
 leagueListPreventDuplicate('2', 'PL')
