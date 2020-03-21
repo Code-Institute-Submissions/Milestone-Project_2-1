@@ -73,6 +73,8 @@ wait a minute in order for the website to work properly again
 
 ## Manual Testing
 
+
+### Tests taken on Desktop
 All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and Microsoft Edge.
 
 1. Hero Header/Landing section on website
@@ -85,7 +87,9 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and M
 
 2. Information Section
     * Hovered back and forth over the information boxes slowly, then quickly to test animate
+    * Clicked on information boxes to see what would happen
     * Hovered over the tooltip on the underlined piece of text
+    * Clicked on tooltip to see what would happen
     * Scrolled up and down to see how this was working and also to see how quickly I could find the next call to action button and/or scroll down to this next section
     * Clicked on the next call to action button, testing again the scroll behaviour and where the button will redirect me
     * Scrolled back up to test that this was working
@@ -105,5 +109,50 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and M
     * Hovered over the social media icons to check if the mouse cursor changes to indicate that they are clickable
     * Clicked on each social media icon to confirm that they all redirect the user to the relevant social media websites
 
+### Tests taken on Mobile/Tablet
 
+The same tests that I performed for desktop were also done on mobile and tablet devices. The only additional testing that needed to be
+done included:
+* Check the responsiveness and sizing of all website elements - to confirm that the sizing matches the designs I created during the building of the project
+* Pressing the information boxes to test the response, confirming the inititation of the animations that occur when users hover over these on desktop
+* Checking, from a user experience point of view, the sizing of elements and judge if it is easy to consume the information presented
+* How the scrolling behaves when scrolling manually and when the user uses the call to action buttons to scroll down
+* Testing how well the background video plays on smaller devices
 
+## Bugs Discovered
+
+#### Bugs Solved
+
+1. Being able to select the same league in both league dropdown menus
+    * Making this option available would create a confusing user expereince, where they could end up displaying the same team on both sets of cards.
+    In order to counter this, some added logic was required to prevent this scenario from happening
+        * Fix: Initially tried building four functions that would detect if that values were the same in both league dropdowns, and if they were,
+        they would append the disable attribute to the same value on the other dropdown. The javascript code worked for most scenaros, however,
+        it was still possible to avoid this logic based on what the user's inital choices ofr leagues. The code was redone slightly, with the additon of
+        keys to reference to. These were used in combination with two functions to indicate how the strcuture of the option tags would be depending on the 
+        option value selected. The following code was finally the successful version:
+        
+    <code>
+    var keys = {
+    "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
+};
+
+document.getElementById("list-1").addEventListener("change", function(e) {
+    var i = this.options[this.selectedIndex].value;
+    var other = document.getElementById("list-2");
+    var index = other.selectedIndex;
+    other.innerHTML = keys[i];
+    other.selectedIndex = index;
+});
+
+document.getElementById("list-2").addEventListener("change", function(e) {
+    var i = this.options[this.selectedIndex].value;
+    var other = document.getElementById("list-1");
+    var index = other.selectedIndex;
+    other.innerHTML = keys[i];
+    other.selectedIndex = index;
+});
+<code>
