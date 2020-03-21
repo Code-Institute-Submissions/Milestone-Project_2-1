@@ -103,8 +103,73 @@ changing only the colours, in order to give the website a more consistent feel.
 ### Wireframes
 
 
+## Features
+
+### Existing Features
+
+####  1. Hero Header
+* Upon arrival to the website the user is greeted with a hero video of a camera panning around a football stadium from a sky view to give an impactful, football-related introduction. This is couple with a simple text logo with a slogan
+* Simple call to action button ‘Get Started’ to direct users to the next section
+
+##### Differentiations from Wireframe
+* Placed Website logo test and slogan over the hero media instead
+* Used a video as the background instead of a static image
+* Made the hero header section cover full width and height of viewports
+* Placed call to action button which directs users to the next section of the website
 
 
+#### 2. Information section
+* Call to action from the Hero Header section brings the user to the About section with information about the application. This aims to inform users the purpose of the website/application, how it works, and information of features for the future
+* Tooltip is provided on the underlined test in the first information box, giving more information about traditional football fan behaviour, which could help users who are less familiar with the sport and the fan culture. 
+* Slide up animation when users hover mouse over on desktop (press on smartphone/tablet) on the information boxes helps to give some user feedback and assistance in reading specific information boxes
+* Simple call to action at the bottom with the text ‘Find Your team’ again helps users to be directed to the next step without having to scroll down
+
+##### Differentiations from Wireframe
+
+* This section was not drafted at all in the wireframe - added to give greater clarity to users
+
+#### 3. Team Match-Up section
+* Call to action from the Information section directs users to this section, where two dropdowns for selecting a league and two dropdowns for team selection are available
+* User can select a team with the default set leagues or changes the league(s) he/she wishes to generate their recommendation with.
+* Upon user selecting a league(s) and a team, the feature generates league statistics and a pie chart of games won, drawn, and lost for their chosen team as well as their recommended team based on current league position
+* When the user changes the league in one of the league dropdown menus, the previous results will clear to give a clean space so a new set of results to generate in once the user makes another team selection
+* Animations on team data slide down and sliding up provide smooth transitions
+
+##### Differentiations from Wireframe
+* Addition of pie charts to visualize certain league statistics of the teams
+* This feature having its own section covering the full width and height in terms of viewports
+* No subscribe button and subsequent modals (reasoning for this further explained in ‘Features Left To Implement’)
+
+#### 4. Footer
+* Simple footer provides social media icon links to different social media platforms, where users can be redirected to relevant social media pages related to the website/application
+* An email is provided as additional information on how to get in contact with the website owner, plus information about the the developer of the website and application
+
+##### Differentiations from Wireframe
+
+#### 5. API Error Modal
+* Since the API used in this project for football data allows only 10 calls per minute on a free account, the need for user feedback is apparent in regards to if the user makes too many selections in quick succession and/or too many users using the website
+* A simple and straightforward modal appears when this API error appears in the screen through a fade in animation, indicating to the user to please wait a minute in order to get the data requests working again
+
+##### Differentiations from Wireframe
+* This feature was not included in the wireframe, where this scenario had not been accounted for yet at the time of drafting up the wireframe
+
+### Features Left to Implement
+#### 1. Subscribe feature, 
+In the wireframe I set the ambition to have a Subscribe feature, where a button is present under each teams’ stats and graphs. 
+This button would produce a modal with a form to enter the user’s email address, and once submitted, exits the modal and a quick 
+pop up message appears thanking the user for subscribing. The user would then receive an email informing him/her which team they 
+have subscribed to. This requires implementation of the EmailJS API, which unfortunately was not possible within the time scope 
+of this project.
+
+#### 2. Access to more team statistics 
+In the future, users could filter their team recommendation generation based on different statistics and time periods 
+eg. (number of goals scored over two seasons). This would also include the need for form elements such as radios and/or 
+checkboxes to implement these filters. This would add greater complexity to the Javascript code, and due to the short 
+time scope of the project, this wasn’t possible to implement.
+
+#### 3. Having more leagues to choose from 
+This version of the website is only using the leagues that can be provided on a free account with the chosen API.
+To increase the amount of leagues to choose from would require financial investment into a paying account of the API.
 
 
 # Credits
