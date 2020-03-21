@@ -12,7 +12,7 @@ function getData(leagueCode, teamNumber, callback) {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
  
-            the_response = xhr.responseText;            
+            var the_response = xhr.responseText;            
             var league_data = JSON.parse(the_response);
             _DATAGLOBAL[leagueCode] = league_data;
  
@@ -50,10 +50,12 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
     var dropdown_html_string = "";
     var table = teamListData.standings[0].table;
-    for (let i in table) {
+    for (var i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string +=  `<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('${leagueCode}', 'team-stats-${teamNumber}', '${i}', '${teamNumber}')">${table[i].team.name}</a>`;
     }
+
+    //"<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     
     team_dropdown_div.innerHTML = dropdown_html_string;
 
@@ -133,20 +135,20 @@ $( "select" ).change(function() {
 
 // Following code ensures that users cannot choose the same league in both league dropdowns
 document.getElementById("list-1").addEventListener("change", function(e) {
-    let i = e.target.options.selectedIndex;
+    var i = e.target.options.selectedIndex;
     document.getElementById("list-2")[i].setAttribute("disabled", true);
 });
 document.getElementById("list-1").addEventListener("click", function(e) {
-    for (let i of document.getElementById("list-2")) {
+    for (var i of document.getElementById("list-2")) {
         i.removeAttribute("disabled");
     }
 });
 document.getElementById("list-2").addEventListener("change", function(e) {
-    let i = e.target.options.selectedIndex;
+    var i = e.target.options.selectedIndex;
     document.getElementById("list-1")[i].setAttribute("disabled", true);
 });
 document.getElementById("list-2").addEventListener("click", function(e) {
-    for (let i of document.getElementById("list-1")) {
+    for (var i of document.getElementById("list-1")) {
         i.removeAttribute("disabled");
     }
 });
