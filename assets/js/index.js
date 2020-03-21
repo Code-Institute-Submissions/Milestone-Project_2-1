@@ -97,7 +97,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
 
     var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
-    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of " + league_table.team.name + "\" id=\"club-crest\">" + "<p> League Position: " +
+    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of " + league_table.team.name + "\" id=\"club-crest\">" + "<p class=\"league-position\"> League Position: " +
     league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
     "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
     "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +

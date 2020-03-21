@@ -185,6 +185,10 @@ body {
     margin-bottom: 20px;
 }
 
+.info-heading h2 {
+    font-weight: 500;
+}
+
 .info-box {
     width: 100%;
     display: flex;
@@ -291,11 +295,6 @@ body {
     100%);
 }
 
-.match-up-heading-row {
-    border: solid #000 1px;
-    background: rgba(225, 221, 219, 0.3);
-}
-
 #games-chart-1 {
     position: relative
 }
@@ -333,6 +332,8 @@ img {
 
 .match-up-heading h2 {
     color: #fff;
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .card {
@@ -346,6 +347,10 @@ img {
 
 #club-crest {
     margin: 10px 10px 10px 10px;
+}
+
+.league-position {
+    font-weight: 600;
 }
 
 .btn-secondary {
