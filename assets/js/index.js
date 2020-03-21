@@ -99,15 +99,25 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
 
     var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
-    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of " + league_table.team.name + "\" id=\"club-crest\">" + "<p class=\"league-position\"> League Position: " +
-    league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
+    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of " + league_table.team.name + "\" onerror=\"imgError(this);\" id=\"club-crest\">" + 
+    "<p id=\"img-error-message\"></p>" + "<p class=\"league-position\"> League Position: " + league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
     "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
     "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +
     league_table.goalsAgainst + "</p>" + "<p> Goal Difference: " + league_table.goalDifference + "</p></div></div>";
 
     team_stats_div.innerHTML = stats_html_string;
 
+
+    // Calls the graph making function that lies within the chart.js file
     teamStatsGraphs(league_table, teamNumber);
+}
+
+    // Following code is defensive programming, generating black team crest and error message under if API can't supply the image for a team
+    function imgError(image) {
+        image.onerror = "";
+        image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
+        document.getElementById("img-error-message").innerHTML = "The image could not be loaded.";
+    return true;
 }
  
 // Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
@@ -133,6 +143,8 @@ $( "select" ).change(function() {
     });
 });
 
+
+// Following code prevents users from choosing the same league in both league dropdowns
 var keys = {
     "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
     "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
