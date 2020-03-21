@@ -71,3 +71,39 @@ the form of a black team crest shield image with text below stating “The image
 a modal appears when this error appears in the console, informing users that too many data requests have been made recently, and that they’ll need to 
 wait a minute in order for the website to work properly again
 
+## Manual Testing
+
+All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and Microsoft Edge.
+
+1. Hero Header/Landing section on website
+    * Opened up the page in the browser
+    * Refreshed the page immediately
+    * Closed the page and then opened the website again in a new tab and in a new browser window
+    * Clicked on *Get Started’ button, to check if the scroll behaviour was smooth
+    * Scrolled back up to test if I could still go back up and scrolled down
+    * Clicked the back button, where it returned me to the landing section view again
+
+2. Information Section
+    * Hovered back and forth over the information boxes slowly, then quickly to test animate
+    * Hovered over the tooltip on the underlined piece of text
+    * Scrolled up and down to see how this was working and also to see how quickly I could find the next call to action button and/or scroll down to this next section
+    * Clicked on the next call to action button, testing again the scroll behaviour and where the button will redirect me
+    * Scrolled back up to test that this was working
+
+3. Team Match-Up section
+    * Refreshed the page to check that i would stay within this section after clicking on the Find Your Team button
+    * Toggled the league selection dropdowns, picking different leagues to test the logic that is meant to prevent users from choosing the same league in both dropdowns
+    * Checked through selecting each team in each league to check that the teams display correctly along with their stats and graphs, also checking to make sure that these are displaying below the correct dropdowns
+    * When conducting team selections I was also testing to see that the other, unselected side produces the correctly matched up team (based on the statistic of current league position)
+    * Checked the teams where their images urls from the API are not working, doing this to test the user feedback put in place to present black shield image along with an error message below
+    * Made many team selections in quick succession in order to activate the API error where too many data calls have been made. Did this to test and ensure the modal appears when this error appears in the console
+    * After making a team selection, I tested the logic that clears team stats and graphs when a new league is selected in one of the league dropdowns
+    * Tested the interactivity of the pie charts, hovering over the different slices of the pie chart, as well as clicking on the legend tags to toggle on/off the display of slices
+    * Refreshed the page to confirm that I stay within the team match-up section and the previous selection is cleared
+
+4. Footer section
+    * Hovered over the social media icons to check if the mouse cursor changes to indicate that they are clickable
+    * Clicked on each social media icon to confirm that they all redirect the user to the relevant social media websites
+
+
+
