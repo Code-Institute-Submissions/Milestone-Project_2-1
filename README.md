@@ -51,9 +51,58 @@ potential new customers/fans
 6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
 7. As a an observer, I want to be able to get in touch with the wbesite owner and be able to access social media related to the website
 
+### Design Choices
+
+#### Inspiration:
+https://www.templatemonster.com/blog/9-essential-sport-web-design-features/
+This blog post inspired a number of my style choices when creating the website/application.
+
+#### Font
+Sans-serif was my font of choice, as it is a font that is easy to read and allows users to focus more on the other design aspects 
+and functionality of the website.
+
+#### Icons
+I used Font Awesome icons for my social media link icons in my footer - this being a visually appealing way to indicate to 
+users how to access website-related social media pages
+
+#### Colours
+
+https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_OrJR392xwRrdV2yWgI1RkCL5Vk_T44YppPBg32ONw8TTXwgM-ysdQYaAlm_EALw_wcB
+
+I drew inspiration from this website for my colour scheme that ended up predominately following the SCUBA theme, consisting of coral, 
+ice blue, grey and teal. I felt this colour scheme could effectively draw the user’s focus better on the main parts of the 
+website/application. These main aspects included the call to actions to direct users through the application journey as well as highlighting
+the main team match-up feature.
+
+#### Hero Header section
+
+Drawing from the main sport website inspiration blog post, videos as backgrounds were suggested and I felt this would have 
+a positive impact on users first arriving to the website. The call to action follows the recommendation of what is common for 
+good websites in general to ensure good UX performance. In terms of implementing the video background, I used this Youtube 
+video for inspiration https://www.youtube.com/watch?v=Xy3GlrddZFI. The actual video itself I obtained as a free stock video 
+from Pexels.com.
+
+#### Information Section
+
+Followed inspiration for design from this Youtube video https://www.youtube.com/watch?v=nuOVuLrjioM. This design is for service 
+information on a website. Since I felt that the application that’s on offer is a type of service, I felt this design could be a 
+good way to explain the concept to users as easily as possible. Especially, since the concept is new for football fans, I felt 
+it was very important to have a design that can clearly convey information. The bolder call to action helps direct users further 
+on to the next section once they’re done reading. Hover animations on the information boxes helps users to focus on a particular 
+section they’re reading.
+
+#### Team Match-Up Section
+
+I used the attention-grabbing colours of my chosen colour scheme (coral, teal) to emphasize this section and feature, to inform 
+users that this is the main feature of the user experience to engage with. To give an easy reading experience for users, I chose 
+a white background for the team stats and graphs once they’ve appeared. These phase into the page through a slide-down animation 
+to give users a smooth transition from selection to results displaying. I replicated many styles from the information section, 
+changing only the colours, in order to give the website a more consistent feel.
+
+
 ### Wireframes
 
-## Design Choices
+
 
 
 
