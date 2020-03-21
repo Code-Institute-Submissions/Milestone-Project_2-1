@@ -20,14 +20,14 @@
             </div>
             <div class="modal-body">
                 <h2>Sorry for the inconvenience</h2>
-                <p>This version of the application unable to handle the number of recent data requests</p>
+                <p>This version of the application is unable to handle the number of recent data requests</p>
                 <p>Please check back in a minute</p>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-
+    <!-- Hero Video and Logo/Text -->
     <div class="container v-header">
         <div class="fullscreen-video-wrap">
                 <video autoplay loop muted playsinline>
@@ -113,7 +113,7 @@
         </div>
         <div class="row justify-content-around">
             <div class="col-md-6 col-lg-4">
-                    <select class="league-list" id="list-1" onchange="populate('1')">
+                    <select class="league-list" id="list-1" onchange="populateTeamDropdowns('1')">
                         <option value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
                         <option value="SA">Italian Serie A</option>
@@ -137,7 +137,7 @@
         </div>
         
             <div class="col-md-6 col-lg-4">
-                    <select class="league-list" id="list-2" onchange="populate('2')">
+                    <select class="league-list" id="list-2" onchange="populateTeamDropdowns('2')">
                         <option disabled value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
                         <option value="SA">Italian Serie A</option>
@@ -151,7 +151,6 @@
                 <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="secondDropdownMenuButton">
                 </div>
                 <div class="team-stats-div" id="team-stats-2"></div>
-                <!--<canvas id="goals-chart-2" width="100%" height="300"></canvas> -->
             </div>
             <div class="chart-container" id="charts-div-2">
                 <div class="card">

@@ -57,6 +57,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     
     team_dropdown_div.innerHTML = dropdown_html_string;
 
+    // Ensures when a team is selected the slidedown animation activates in displaying stats and graphs
     $(".dropdown-item").click(function() {
         $(".chart-container, .team-stats-div").slideDown( "slow" );
     });
@@ -96,7 +97,7 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
     var league_table = _DATAGLOBAL[leagueCode].standings[0].table[selectedTeam];
 
     var stats_html_string = "<div class=\"card\"><div class=\"card-body\"><h5>" + league_table.team.name + "</h5>" +
-    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of" + league_table.team.name + "\" id=\"club-crest\">" + "<p> League Position: " +
+    "<img src=\"" + league_table.team.crestUrl.replace("http:", "https:") + "\" alt=\"Club crest of " + league_table.team.name + "\" id=\"club-crest\">" + "<p> League Position: " +
     league_table.position + "</p>" +  "<p> Played Games: " + league_table.playedGames + "</p>" + "<p> Wins: " + league_table.won +
     "</p>" + "<p> Draws: " + league_table.draw + "</p>" + "<p> Losses: " + league_table.lost + "</p>" +
     "<p> Points: " + league_table.points + "</p>" + "<p> Goals For: " + league_table.goalsFor + "</p>" + "<p> Goals Against: " +
@@ -104,21 +105,20 @@ function teamStatsInMyPage(leagueCode, teamDataId, selectedTeam, teamNumber) {
 
     team_stats_div.innerHTML = stats_html_string;
 
-    teamStatsGraphs(league_table, teamDataId, selectedTeam, teamNumber);
+    teamStatsGraphs(league_table, teamNumber);
 }
  
 // Getting the options values (that are league codes) plus the list numbers for later dropdown ID references
-function getSelectedLeague (v) {
-    var my_select = document.getElementById("list-" + v);
+function getSelectedLeague (listNumber) {
+    var my_select = document.getElementById("list-" + listNumber);
     var league = my_select.options[my_select.selectedIndex].value;
     return league;
 }
- 
- 
+
 // Take stored league codes and list numbers and pass them throiugh to getData function
-function populate(v) {
-    var league = getSelectedLeague(v);
-    getData(league, v);
+function populateTeamDropdowns(listNumber) {
+    var league = getSelectedLeague(listNumber);
+    getData(league, listNumber);
 }
 
 // To hide the team-stats and graphs as soon as the page has loaded
@@ -157,6 +157,6 @@ $(function () {
 });
 
 // This onchange function called twice for both league dropdowns to load default team dropdown items
-populate('1');
-populate('2');
+populateTeamDropdowns('1');
+populateTeamDropdowns('2');
 

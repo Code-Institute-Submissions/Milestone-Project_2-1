@@ -15,6 +15,7 @@ body {
     color: #333;
     overflow-x: hidden;
     text-align: center;
+    font-family: sans-serif;
 }
 
 .btn {

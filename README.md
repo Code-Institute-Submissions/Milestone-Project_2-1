@@ -16,11 +16,11 @@ providing a way to compare two teams based on league performance over the last 3
 * To provide a new revenue streams for sport teams/clubs by providing a new way to obtain international fan bases
 * By providing new revenue streams for sports teams/clubs, subsequently would look to obtain revenue in the form of commission in providing
 potential new customers/fans
+* To build an exciting application for the developer's portfolio, this being an idea he'll want to develop further in the future
 
 ### Goals of users/sports fans:
 * To conveniently and efficiently check up on relevant information on the team(s) they support
-* To give inspiration for choosing a team in another geographic league to support
-* To conveniently be able to redirect themselves to team/club websites for more information and/or commerical offerings
+* To give inspiration for choosing a team in another geographic region to support
 
 ## UX
 
@@ -38,7 +38,7 @@ potential new customers/fans
 
 #### Why this website is a great solution:
 * Currently in the football industry there is no clear advisor for fans who would want to add to the teams(s) they support
-* Curious fans and/or fans who live and work abroad do not have any real basis/support in finding a team to follow in the new country they reside in
+* Curious fans and/or fans who live and work abroad do not have any basis/support in finding a team to follow in the new country they reside in
 * The solution can contribute towards greater globalisation of the sport, helping football teams/clubs themselves to become more international
 * More international fans can lead to new streams of commerical activity for foreign leagues and teams (through advertising game broadcasting, merchandise etc.)
 
@@ -49,9 +49,11 @@ potential new customers/fans
 4. As a potential customer, I want to be able to subscribe to a team(s) so I can receive automatic updates/news via email
 5. As a potential customer, I want to have more information about a team(s), where I can be easily redirected to a club/team website to find commerical offerings
 6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
+7. As a an observer, I want to be able to get in touch with the wbesite owner and be able to access social media related to the website
 
 ### Wireframes
 
+## Design Choices
 
 
 

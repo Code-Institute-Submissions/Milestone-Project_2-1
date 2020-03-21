@@ -22,7 +22,7 @@ pass in two arguments: the team and the targetted container
 4. 
 
 Selecting the league :
-Create a dropdown with the league codes (can be hard coded) - Gustaf comment: Not sure where these codes should be hard coded? Plus these codes don't intuitively make sense of their own for a user, are they added as an id/class in the element?
+Create a dropdown with the league codes (can be hard coded)
 Add an event listener to it (jquery / .change / documentation and examples there: https://www.w3schools.com/jquery/event_change.asp)
 This event listener will call the function getData() with the code you pass in.
 
