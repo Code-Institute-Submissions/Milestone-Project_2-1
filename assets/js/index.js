@@ -56,7 +56,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     }
     
     team_dropdown_div.innerHTML = dropdown_html_string;
-        
+
     $(".dropdown-item").click(function() {
         $(".chart-container, .team-stats-div").slideDown( "slow" );
     });

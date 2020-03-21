@@ -17,9 +17,9 @@ function teamStatsGraphs(leagueTable, teamGraphID, selectedTeam, teamNumber) {
             label: 'Number of Games',
             data: [leagueTable.won, leagueTable.draw, leagueTable.lost],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)'
             ]
         }]
     },

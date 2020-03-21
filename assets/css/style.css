@@ -28,6 +28,79 @@ body {
     box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
+/* API ERROR MODAL - for too many calls */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Modal Animation */
+    @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+    @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Modal Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #EF6C33;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 16px 16px;
+    background-color: #EF6C33;
+    color: white;
+}
+
 /* Header Section */
 
 .v-header {
@@ -62,9 +135,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: #333536;
+    background: rgba(51, 53, 54, 0.85);
     z-index: 1;
-    opacity: 0.85;
 }
 
 .header-content {
@@ -89,46 +161,6 @@ body {
         padding-right: 3rem;
         padding-left: 3rem;
     }
-}
-
-/* API ERROR MODAL - for too many calls */
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* Information Section */
@@ -158,6 +190,10 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
+}
+
+.info-box .box a {
+ text-decoration: underline;
 }
 
 .info-box .box {
@@ -222,14 +258,16 @@ body {
 .info-box .box:hover h3,
 .info-box .box:hover p,
 .info-box .box:hover ul li,
-.info-box .box:hover ol li
+.info-box .box:hover ol li,
+.info-box .box:hover a
 {
     color: #fff;
 }
 
 .info-box .box p,
 .info-box .box ol,
-.info-box .box ul
+.info-box .box ul,
+.info-box .box a
 {
     position: relative;
     z-index: 2;
@@ -250,6 +288,11 @@ body {
     align-items: center;
     background: linear-gradient(#EF6C33, #EF6C33 50%, #E1DDDB 50%, #E1DDDB
     100%);
+}
+
+.match-up-heading-row {
+    border: solid #000 1px;
+    background: rgba(225, 221, 219, 0.3);
 }
 
 #games-chart-1 {

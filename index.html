@@ -11,15 +11,19 @@
 <body>
 
 <header>
-
-<!-- The Modal -->
+    <!-- The Modal -->
     <div id="myModal" class="modal">
-
-    <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Unfortunately this application doesn't support the number of requests made in the short
-            space of time.<br>Check back in one minute and it should be up and running again!</p>
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h2>Sorry for the inconvenience</h2>
+                <p>This version of the application unable to handle the number of recent data requests</p>
+                <p>Please check back in a minute</p>
+            </div>
+            <div class="modal-footer">
+            </div>
         </div>
     </div>
 
@@ -45,17 +49,19 @@
         <h2>About</h2>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 info-box">
+            <div class="col-lg-4 col-md-7 info-box">
                         <div class="box">
                             <h2>01</h2>
                             <h3>Why One More Team</h3>
                             <p>Following your team doesn't quite satisfy your football passion?
-                            <br>Maybe moved to a new country, and need inspiration for a team more local to support?
+                            <br>Maybe moved to a new country, and need inspiration for a team
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" 
+                            title="Traditonally football fans follow one team, this usually from their native country. However, with globalisation of the sport comes increasing curiousity to follow football elsewhere">more local to support?</a>
                             <br>Whatever the reason, <strong>One More Team</strong> is here to help with that very inspiration - 
                             helping you to find one more team to support</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 info-box">
+                    <div class="col-lg-4 col-md-7 info-box">
                         <div class="box">
                             <h2>02</h2>
                             <h3>How It Works</h3>
@@ -75,7 +81,7 @@
                             </ol>
                         </div>
                     </div>
-                    <div class="col-lg-4 info-box">
+                    <div class="col-lg-4 col-md-7 info-box">
                         <div class="box">
                             <h2>03</h2>
                             <h3>Future Features</h3>
@@ -88,7 +94,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-12">
                         <a href="#match-up-section" class="btn scrollTo">Find Your Team</a>
                     </div>
             </div>
@@ -99,13 +105,13 @@
 <!--DROPDOWN MENUS FOR LEAGUE AND TEAM SELECTION-->
 <section class="team-match-up-feature" id="match-up-section">
     <div class="container-fluid match-up-feature">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center match-up-heading-row">
             <div class="col match-up-heading">
             <h2>Find One More Team</h2>
             </div>
         </div>
         <div class="row justify-content-around">
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
                     <select class="league-list" id="list-1" onchange="populate('1')">
                         <option value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
@@ -129,10 +135,10 @@
                 </div>
         </div>
         
-            <div class="col-lg-4">
+            <div class="col-md-6 col-lg-4">
                     <select class="league-list" id="list-2" onchange="populate('2')">
+                        <option disabled value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
-                        <option value="PL">English Premier League</option>
                         <option value="SA">Italian Serie A</option>
                         <option value="PD">Spanish La Liga</option>
                     </select>
