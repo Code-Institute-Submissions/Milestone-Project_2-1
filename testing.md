@@ -57,4 +57,17 @@ that this is a feature to be implemented in the future. This is to inform users 
 * The developer unfortunately has been unable to implement this feature within the project time scope, but this missing feature has been added 
 to the pipeline of future developments in the ‘Future Features’ information box
 
+6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
+* Similarly to User Story 5, this feature is not in place but has been mentioned as a ‘Future Feature’ in the information section of the webpage
+
+7. As a an observer, I want to be able to get in touch with the website owner and be able to access social media related to the website
+* An email address is provided in the footer of the webpage that users can use to get in touch with the website owner/developer
+* Social media icon links are provided in the footer so that users can be redirected to the social media pages for One More Team
+
+8. As a new/regular visitor of the website, I want an error free user experience, with clear communication from the website if something goes wrong
+* Defensive programming has been implemented on images that do not load due to an error with the url sent by the API - this user feedback coming in 
+the form of a black team crest shield image with text below stating “The image could not be loaded”.
+* Console errors do occur also when too many API calls are made. The API on a free account supports 10 calls a minute. To counter this potential error, 
+a modal appears when this error appears in the console, informing users that too many data requests have been made recently, and that they’ll need to 
+wait a minute in order for the website to work properly again
 
