@@ -101,6 +101,9 @@ changing only the colours, in order to give the website a more consistent feel.
 
 
 ### Wireframes
+I used the tool Balsamiq in order to create my wireframe. I prodcued one png file that has wireframe images of the idea on desktop, mobile and tablet.
+The reason that this wireframe is vey concise is that my initial thoughts were that the design of the webpage would be more concise than
+how then end product of my project looks like.
 
 
 ## Features
@@ -170,6 +173,18 @@ time scope of the project, this wasn’t possible to implement.
 #### 3. Having more leagues to choose from 
 This version of the website is only using the leagues that can be provided on a free account with the chosen API.
 To increase the amount of leagues to choose from would require financial investment into a paying account of the API.
+
+## Technologies used
+
+This project has included the use of HTML, CSS and Javascript programming languages.
+
+* JQuery - used to simplify some DOM manipulation for certain functions
+* GitPod - The developer used this tool as their IDE when building this project
+* Bootstrap - Utilized to simply html structure of website and responsiveness of it. Popper also used to be able to enable some Bootstrap functionality
+* GitHub - This project used GitHub to be able to store the project remotely and then be able to deploy the project
+* FontAwesome - Icons in the footer section for social media links coming from this resource
+* Football-data.org - API used by developer in order to retrieve football data that is displayed in the web page
+* ChartJS - Developer chose specific stats to display visually in a pie chart using this chart making API
 
 
 # Credits
