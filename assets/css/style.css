@@ -350,3 +350,13 @@ img {
 .btn-secondary {
     background: #106786;
 }
+
+/* Footer Section */
+
+.footer-main-div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #272727;
+    padding: 20px 0px;
+}
