@@ -50,7 +50,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var team_dropdown_div = document.getElementById("team-list-" + teamNumber);
     var dropdown_html_string = "";
     var table = teamListData.standings[0].table;
-    for (var i in table) {
+    for (let i = 0; i < table.length; i++) {
         
         dropdown_html_string +=  `<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('${leagueCode}', 'team-stats-${teamNumber}', '${i}', '${teamNumber}')">${table[i].team.name}</a>`;
     }
@@ -133,24 +133,27 @@ $( "select" ).change(function() {
     });
 });
 
-// Following code ensures that users cannot choose the same league in both league dropdowns
+var keys = {
+    "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+    "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
+}
+
 document.getElementById("list-1").addEventListener("change", function(e) {
-    var i = e.target.options.selectedIndex;
-    document.getElementById("list-2")[i].setAttribute("disabled", true);
+    var i = this.options[this.selectedIndex].value;
+    var other = document.getElementById("list-2");
+    var index = other.selectedIndex;
+    other.innerHTML = keys[i];
+    other.selectedIndex = index;
 });
-document.getElementById("list-1").addEventListener("click", function(e) {
-    for (var i of document.getElementById("list-2")) {
-        i.removeAttribute("disabled");
-    }
-});
+
 document.getElementById("list-2").addEventListener("change", function(e) {
-    var i = e.target.options.selectedIndex;
-    document.getElementById("list-1")[i].setAttribute("disabled", true);
-});
-document.getElementById("list-2").addEventListener("click", function(e) {
-    for (var i of document.getElementById("list-1")) {
-        i.removeAttribute("disabled");
-    }
+    var i = this.options[this.selectedIndex].value;
+    var other = document.getElementById("list-1");
+    var index = other.selectedIndex;
+    other.innerHTML = keys[i];
+    other.selectedIndex = index;
 });
 
 // Initiates Bootstrap tooltip component
