@@ -156,3 +156,33 @@ document.getElementById("list-2").addEventListener("change", function(e) {
     other.selectedIndex = index;
 });
 <code>
+
+2. Error message for images that failed to upload from API was only appearing on one side
+    * I had implemented a logic that would display a default shield image alongside an error message if the API failed to upload an image
+    due to the url not working. Unfortunately, the error message was only appearing on one side.
+        * Fix: I needed to adjust the appended string that displays team inforamtion/stats into the cards so that I could pass in the teamNumber
+        argument into the imgError function. This was needed, in additon to the specified image, to ensure the error message falls belwo the right team.
+        The following code worked successfully in the end:
+        <code>
+        function imgError(image, teamNumber) {
+        image.onerror = "";
+        image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
+        document.getElementById("img-error-message-" + teamNumber).innerHTML = "The image could not be loaded.";
+    return true;
+}    
+    <code>
+
+3. Anchor tags for the tooltip and for a team selected redirecting the user inconveniently
+    - Anchor tags for selecting a team would redirect users far down towards the graphs, causing slight confusion and potential frustration from
+    a user experience point of view. The tooltip anchor tag had not been defined, and so clicking on this redirected users back the the landing section.
+        * Fix: Adjusted the ids that these anchor tags were targeting so that users would be relocated to more relevant locations. The tooltip would redirect
+        the user to the information box upon clicking it, while the anchor tag on each team redirected users to the top of the first team stats card.
+
+#### Bugs Unsolved
+1. In the Safari browser, the scroll behaviour: smooth css styling didn't apply, where button click transitions were abrupt
+    * Safari does not support this css styling, and as far as the developer could researchduring the time scope of the project, there
+    didn't exist a clear ad easily implementable solution to this issue. 
+
+## Furher Testing
+1. Asked fellow students, friends and family to look at the site on their devices and give feedback if they encountered any issues.
+2. One More Team was viewed on all devices and orientations available in Chrome DevTools
