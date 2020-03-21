@@ -186,6 +186,39 @@ This project has included the use of HTML, CSS and Javascript programming langua
 * Football-data.org - API used by developer in order to retrieve football data that is displayed in the web page
 * ChartJS - Developer chose specific stats to display visually in a pie chart using this chart making API
 
+## Testing
+
+All information about the testing procedures I conducted can be found here in a separate testing.md file
+
+## Deployment
+
+This project was developed using the GitPod, where I have committed to git, and subsequently pushed to GitHub using the terminal within GitPod.
+
+To deploy my project to GitHub Pages from its GitHub repository, the following steps were taken:
+
+Log into GitHub.
+From the list of repositories on the screen, select Ljungwaldh/Milestone-Project_2.
+From the menu items near the top of the page (on the right hand side), select Settings.
+Scroll down to the GitHub Pages section.
+Under Source click the drop-down menu labelled None and select Master Branch
+On selecting Master Branch the page is automatically refreshed, subsequently the website is now deployed.
+Scroll back down to the GitHub Pages section to retrieve the link to the deployed website.
+
+### How to run the project locally
+
+To clone this project from GitHub:
+
+1. Follow this link to the project's GitHub repository.
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository.
+4. In your local IDE open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 3.
+7. git clone https://github.com/USERNAME/REPOSITORY
+8. Press Enter. Your local clone will be created.
+
+Further reading and troubleshooting on cloning a repository from GitHub here.
+
 
 # Credits
 
