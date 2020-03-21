@@ -52,7 +52,7 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
     var table = teamListData.standings[0].table;
     for (let i in table) {
         
-        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#games-chart-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
+        dropdown_html_string += "<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     }
     
     team_dropdown_div.innerHTML = dropdown_html_string;
