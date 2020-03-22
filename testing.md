@@ -152,7 +152,6 @@ document.getElementById("list-1").addEventListener("change", function(e) {
     other.selectedIndex = index;
 });
 
-<code>
 document.getElementById("list-2").addEventListener("change", function(e) {
     var i = this.options[this.selectedIndex].value;
     var other = document.getElementById("list-1");
@@ -167,14 +166,15 @@ document.getElementById("list-2").addEventListener("change", function(e) {
         * Fix: I needed to adjust the appended string that displays team inforamtion/stats into the cards so that I could pass in the teamNumber
         argument into the imgError function. This was needed, in additon to the specified image, to ensure the error message falls belwo the right team.
         The following code worked successfully in the end:
-        
+
     ```Javascript
         function imgError(image, teamNumber) {
             image.onerror = "";
             image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
             document.getElementById("img-error-message-" + teamNumber).innerHTML = "The image could not be loaded.";
         return true;
-}```
+}
+``
 
 3. Anchor tags for the tooltip and for a team selected redirecting the user inconveniently
     * Anchor tags for selecting a team would redirect users far down towards the graphs, causing slight confusion and potential frustration froma user experience point of view. The tooltip anchor tag had not been defined, and so clicking on this redirected users back the the landing section.
