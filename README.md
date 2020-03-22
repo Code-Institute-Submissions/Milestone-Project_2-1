@@ -44,12 +44,13 @@ potential new customers/fans
 
 ### User Stories
 1. As a new visitor to the website, I want it to be very clear as to what the purpose of the website is
-2. As a new visitor of the website, I want to get concise and relevent league statisitics of the team(s) I follow
+2. As a new visitor of the website, I want to get concise and relevant league statistics of the team(s) I follow
 3. As a new visitor of the website, I would like some inspiration for a team in a foreign league to support, either out of curiosity or because I want to localize myself in a new country
 4. As a potential customer, I want to be able to subscribe to a team(s) so I can receive automatic updates/news via email
-5. As a potential customer, I want to have more information about a team(s), where I can be easily redirected to a club/team website to find commerical offerings
+5. As a potential customer, I want to have more information about a team(s), where I can be easily redirected to a club/team website to find commercial offerings
 6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
-7. As a an observer, I want to be able to get in touch with the wbesite owner and be able to access social media related to the website
+7. As a an observer, I want to be able to get in touch with the website owner and be able to access social media related to the website
+8. As a visitor of the website, I want an error free user experience, with clear communication from the website if something goes wrong
 
 ### Design Choices
 
@@ -190,37 +191,39 @@ This project has included the use of HTML, CSS and Javascript programming langua
 
 All information about the testing procedures I conducted can be found here in a separate testing.md file
 
-## Deployment
+# Deployment
 
-This project was developed using the GitPod, where I have committed to git, and subsequently pushed to GitHub using the terminal within GitPod.
+I developed this project in [GitPod IDE][], where I would commit to Git, and then push to GitHub via using the terminal in GitPod. I deployed this [Github repository][19] to GitHub Pages via the following process:
+* Logged into GitHub
+* Under the tab 'Repositories', I selected **Milestone-Project_2**
+* Subsequently I selected **'Settings'** from the menu at the top of the page
+* I scrolled down the page top the **GitHub Pages** section
+* On the dropdown bar under 'Source', I selected **'master branch'**
+* Once I selected 'master branch' the page reloaded, and the website was deployed
+* I scrolled down the page again to find the **link** to the deployed website within a green highlighted area of the GitHub pages section, where this section also notified me that my website is deployed
 
-To deploy my project to GitHub Pages from its GitHub repository, the following steps were taken:
+The master branch was the only branch used for this website.
 
-Log into GitHub.
-From the list of repositories on the screen, select Ljungwaldh/Milestone-Project_2.
-From the menu items near the top of the page (on the right hand side), select Settings.
-Scroll down to the GitHub Pages section.
-Under Source click the drop-down menu labelled None and select Master Branch
-On selecting Master Branch the page is automatically refreshed, subsequently the website is now deployed.
-Scroll back down to the GitHub Pages section to retrieve the link to the deployed website.
+[]: <https://github.com/Ljungwaldh/First-Milestone-Project>
 
-### How to run the project locally
+## How to run the project locally
 
-To clone this project from GitHub:
+To clone the project from Github:
 
-1. Follow this link to the project's GitHub repository.
-2. Under the repository name, click "Clone or download".
-3. In the Clone with HTTPs section, copy the clone URL for the repository.
-4. In your local IDE open Git Bash.
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in Step 3.
-7. git clone https://github.com/USERNAME/REPOSITORY
-8. Press Enter. Your local clone will be created.
+1. Click the following link to come to the [GitHub repository][] for this project
+2. Click on the green button 'Clone or Download'
+3. A dropdown window will appear titled 'Clone with HTTPS' - copy the link provided in the field below
+4. Open your local IDE
+5. Change the current working directory to the location where you want the cloned directory to be made
+6. Type in <code>git clone</code>, followed by pasting in the url copied from Step 3 alongside the git command.
+7. Press Enter, and the clone should subsequently be created
 
-Further reading and troubleshooting on cloning a repository from GitHub here.
+Further troubleshooting on how to run the project locally can be found [here][].
+
+[]: <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>
 
 
-# Credits
+## Credits
 
 Video by Kelly Lacy from Pexels: https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/
 Code for displaying video files onto html page: https://www.w3schools.com/html/html5_video.asp
