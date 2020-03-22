@@ -141,7 +141,7 @@ done included:
         "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
         "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
         "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
-}; </code>
+}; </code><br>
 
 <code>
 document.getElementById("list-1").addEventListener("change", function(e) {
@@ -150,7 +150,7 @@ document.getElementById("list-1").addEventListener("change", function(e) {
     var index = other.selectedIndex;
     other.innerHTML = keys[i];
     other.selectedIndex = index;
-}); </code>
+}); </code><br>
 
 <code>
 document.getElementById("list-2").addEventListener("change", function(e) {
