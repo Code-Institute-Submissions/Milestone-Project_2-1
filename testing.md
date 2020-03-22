@@ -1,17 +1,21 @@
 # Testing - One More Team
 
+[Main README.md file](README.md)
+
+[View website in GitHub Pages](https://ljungwaldh.github.io/Milestone-Project_2/)
+
 ## Code Validation Testing
 
 To initially test the website I used the following validators:
 
-W3C Markup Validation Service for HTML 
+[W3C Markup Validation Service](https://validator.w3.org/) for HTML 
 I inserted the code into the validator via direct input. I consistently checked used this throughut previous checks, 
 where any errors/warnings were addressed directly and documented in commits. Upon a final check no erros/warnings were present.
 
-W3C CSS Validation Service
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS
 I inserted the code into the validator via direct input. No errors were were found upon final check.
 
-JSHint
+[JSHint][https://jshint.com/] for Javascript
 I inserted the code into the validator via direct input. Found a number of warnings, these includng:
 * Several instances where semi-colons were missing, which I addressed directly
 * Several mentions of 'const', 'for of' and 'let' with the note 'is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)'. For thse warnings I
@@ -33,53 +37,47 @@ After adjustments to the code for fixing bugs and addressing the above points fo
 * Two unused variables (code line 81 teamMatchUp), (code line 115 imgError) - These are due to the fact that these are connected to event listeners that are located in html elements
 
 For the final check on the chart.js file, the only notice to come back was stating that Chart was an undefined variable. This is due to the fact that this reference is part of
-a CHartJS specific syntax in the function that draws the graphs, so it may not be recognised by JSHint in this case.
+a ChartJS specific syntax in the function that draws the graphs, so it may not be recognised by JSHint in this case.
 
 ## User Stories Testing
 
 1. As a new visitor to the website, I want it to be very clear as to what the purpose of the website is
-* User initially lands on Hero header section, making it quite clear what the website relates to (being football) so the user knows right away that it’s purpose is linked to this sport
-* Clear Call to action redirects users quickly to more elaborate information about the purpose of the website and application, how it works, and what features to expect in the future
-* Tooltip on underlined text explains further the football fan culture norm of following one team traditionally, but that globalisation of the sport can increase curiosity and appetite for football fans to follow another team elsewhere
-* A portion of text in the ‘How it Works’ information box is highlighted in bold to draw extra attention towards it. This is because this information defines how, in this version of the application, the main feature generates team recommendations.
-* The purpose of the website is extended with a description of what features are to come in the future in the information box ‘Future Features’
+    * User initially lands on Hero header section, making it quite clear what the website relates to (being football) so the user knows right away that it’s purpose is linked to this sport
+    * Clear Call to action redirects users quickly to more elaborate information about the purpose of the website and application, how it works, and what features to expect in the future
+    * Tooltip on underlined text explains further the football fan culture norm of following one team traditionally, but that globalisation of the sport can increase curiosity and appetite for football fans to follow another team elsewhere
+    * A portion of text in the ‘How it Works’ information box is highlighted in bold to draw extra attention towards it. This is because this information defines how, in this version of the application, the main feature generates team recommendations.
+    * The purpose of the website is extended with a description of what features are to come in the future in the information box ‘Future Features’
 
 2. As a new visitor of the website, I want to get concise and relevant league statistics of the team(s) I follow
-* User is directed to the main team match-up feature via the calls to action in the previous sections
-* The user can easily pick the league and team he wants to find stats on. Stats are generated quickly and clearly in text form
-* In addition to this, games ‘won’, ‘drawn’, and ‘lost’ are visualised in a pie chart
+    * User is directed to the main team match-up feature via the calls to action in the previous sections
+    * The user can easily pick the league and team he wants to find stats on. Stats are generated quickly and clearly in text form
+    * In addition to this, games ‘won’, ‘drawn’, and ‘lost’ are visualised in a pie chart
 
 3. As a new visitor of the website, I would like some inspiration for a team in a foreign league to support, either out of curiosity or because I want to localize myself in a new country
-* The user is directed towards the team recommendation/match-up feature, where he/she can select the leagues to use for generating the recommendation
-* Along the way, the user is informed of how the application/feature works, understanding what team recommendations will be based on
-* User selects leagues to use for the team generation, then selects the team they support/want to use to initiate their recommendation
-* Chosen team and recommended team is shown, this providing one way of inspiring the user to which additional team they could follow/support
+    * The user is directed towards the team recommendation/match-up feature, where he/she can select the leagues to use for generating the recommendation
+    * Along the way, the user is informed of how the application/feature works, understanding what team recommendations will be based on
+    * User selects leagues to use for the team generation, then selects the team they support/want to use to initiate their recommendation
+    * Chosen team and recommended team is shown, this providing one way of inspiring the user to which additional team they could follow/support
 
 4. As a potential customer, I want to be able to subscribe to a team(s) so I can receive automatic updates/news via email
-* While the developer wasn't able to implement this feature within the time scope of this project, a note is made in the information section
-that this is a feature to be implemented in the future. This is to inform users that the intention to fulfill this possible need is there
+    * While the developer wasn't able to implement this feature within the time scope of this project, a note is made in the information section that this is a feature to be implemented in the future. This is to inform users that the intention to fulfill this possible need is there
 
 5. As a potential customer, I want to have more information about a team(s), where I can be easily redirected to a club/team website to find commercial offerings
-* In relation to the Subscribe feature, this would have been included as a part of that feature (via an email sent to the user upon subscribing) 
-* The developer unfortunately has been unable to implement this feature within the project time scope, but this missing feature has been added 
-to the pipeline of future developments in the ‘Future Features’ information box
+    * In relation to the Subscribe feature, this would have been included as a part of that feature (via an email sent to the user upon subscribing) 
+    * The developer unfortunately has been unable to implement this feature within the project time scope, but this missing feature has been added to the pipeline of future developments in the ‘Future Features’ information box
 
 6. As a potential customer/observer, I want social media links available so I can easily access a club/team's social networking activities
-* Similarly to User Story 5, this feature is not in place but has been mentioned as a ‘Future Feature’ in the information section of the webpage
+    * Similarly to User Story 5, this feature is not in place but has been mentioned as a ‘Future Feature’ in the information section of the webpage
 
 7. As a an observer, I want to be able to get in touch with the website owner and be able to access social media related to the website
-* An email address is provided in the footer of the webpage that users can use to get in touch with the website owner/developer
-* Social media icon links are provided in the footer so that users can be redirected to the social media pages for One More Team
+    * An email address is provided in the footer of the webpage that users can use to get in touch with the website owner/developer
+    * Social media icon links are provided in the footer so that users can be redirected to the social media pages for One More Team
 
 8. As a new/regular visitor of the website, I want an error free user experience, with clear communication from the website if something goes wrong
-* Defensive programming has been implemented on images that do not load due to an error with the url sent by the API - this user feedback coming in 
-the form of a black team crest shield image with text below stating “The image could not be loaded”.
-* Console errors do occur also when too many API calls are made. The API on a free account supports 10 calls a minute. To counter this potential error, 
-a modal appears when this error appears in the console, informing users that too many data requests have been made recently, and that they’ll need to 
-wait a minute in order for the website to work properly again
+    * Defensive programming has been implemented on images that do not load due to an error with the url sent by the API - this user feedback coming in the form of a black team crest shield image with text below stating “The image could not be loaded”.
+    * Console errors do occur also when too many API calls are made. The API on a free account supports 10 calls a minute. To counter this potential error, a modal appears when this error appears in the console, informing users that too many data requests have been made recently, and that they’ll need to wait a minute in order for the website to work properly again
 
 ## Manual Testing
-
 
 ### Tests taken on Desktop
 All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and Microsoft Edge.
@@ -131,20 +129,18 @@ done included:
 #### Bugs Solved
 
 1. Being able to select the same league in both league dropdown menus
-    * Making this option available would create a confusing user expereince, where they could end up displaying the same team on both sets of cards.
-    In order to counter this, some added logic was required to prevent this scenario from happening
+    * Making this option available would create a confusing user expereince, where they could end up displaying the same team on both sets of cards.In order to counter this, some added logic was required to prevent this scenario from happening
         * Fix: Initially tried building four functions that would detect if that values were the same in both league dropdowns, and if they were,
         they would append the disable attribute to the same value on the other dropdown. The javascript code worked for most scenaros, however,
         it was still possible to avoid this logic based on what the user's inital choices ofr leagues. The code was redone slightly, with the additon of
         keys to reference to. These were used in combination with two functions to indicate how the strcuture of the option tags would be depending on the 
         option value selected. The following code was finally the successful version:
-        
-    <code>
+<code>
     var keys = {
-    "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
-    "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
-    "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
-    "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
+        "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+        "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+        "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
+        "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
 };
 
 document.getElementById("list-1").addEventListener("change", function(e) {
@@ -165,8 +161,7 @@ document.getElementById("list-2").addEventListener("change", function(e) {
 <code>
 
 2. Error message for images that failed to upload from API was only appearing on one side
-    * I had implemented a logic that would display a default shield image alongside an error message if the API failed to upload an image
-    due to the url not working. Unfortunately, the error message was only appearing on one side.
+    * I had implemented a logic that would display a default shield image alongside an error message if the API failed to upload an imagedue to the url not working. Unfortunately, the error message was only appearing on one side.
         * Fix: I needed to adjust the appended string that displays team inforamtion/stats into the cards so that I could pass in the teamNumber
         argument into the imgError function. This was needed, in additon to the specified image, to ensure the error message falls belwo the right team.
         The following code worked successfully in the end:
@@ -180,8 +175,7 @@ document.getElementById("list-2").addEventListener("change", function(e) {
     <code>
 
 3. Anchor tags for the tooltip and for a team selected redirecting the user inconveniently
-    - Anchor tags for selecting a team would redirect users far down towards the graphs, causing slight confusion and potential frustration from
-    a user experience point of view. The tooltip anchor tag had not been defined, and so clicking on this redirected users back the the landing section.
+    * Anchor tags for selecting a team would redirect users far down towards the graphs, causing slight confusion and potential frustration froma user experience point of view. The tooltip anchor tag had not been defined, and so clicking on this redirected users back the the landing section.
         * Fix: Adjusted the ids that these anchor tags were targeting so that users would be relocated to more relevant locations. The tooltip would redirect
         the user to the information box upon clicking it, while the anchor tag on each team redirected users to the top of the first team stats card.
 

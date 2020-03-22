@@ -196,13 +196,13 @@ To increase the amount of leagues to choose from would require financial investm
 
 This project has included the use of HTML, CSS and Javascript programming languages.
 
-* JQuery - used to simplify some DOM manipulation for certain functions
-* GitPod - The developer used this tool as their IDE when building this project
-* Bootstrap - Utilized to simply html structure of website and responsiveness of it. Popper also used to be able to enable some Bootstrap functionality
-* GitHub - This project used GitHub to be able to store the project remotely and then be able to deploy the project
-* FontAwesome - Icons in the footer section for social media links coming from this resource
-* Football-data.org - API used by developer in order to retrieve football data that is displayed in the web page
-* ChartJS - Developer chose specific stats to display visually in a pie chart using this chart making API
+* [JQuery][5] - used to simplify some DOM manipulation for certain functions
+* [GitPod][6] - The developer used this tool as their IDE when building this project
+* [Bootstrap][7] - Utilized to simply html structure of website and responsiveness of it. [Popper][10] also used to be able to enable some Bootstrap functionality
+* [GitHub][8] - This project used GitHub to be able to store the project remotely and then be able to deploy the project
+* [FontAwesome][9] - Icons in the footer section for social media links coming from this resource
+* [Football-data.org][11] - API used by developer in order to retrieve football data that is displayed in the web page
+* [ChartJS][12] - Developer chose specific stats to display visually in a pie chart using this chart making API
 
 ## Testing
 
@@ -210,7 +210,7 @@ All information about the testing procedures I conducted can be found here in a 
 
 # Deployment
 
-I developed this project in [GitPod IDE][], where I would commit to Git, and then push to GitHub via using the terminal in GitPod. I deployed this [Github repository][19] to GitHub Pages via the following process:
+I developed this project in [GitPod IDE][6], where I would commit to Git, and then push to GitHub via using the terminal in GitPod. I deployed this [Github repository][13] to GitHub Pages via the following process:
 * Logged into GitHub
 * Under the tab 'Repositories', I selected **Milestone-Project_2**
 * Subsequently I selected **'Settings'** from the menu at the top of the page
@@ -221,13 +221,11 @@ I developed this project in [GitPod IDE][], where I would commit to Git, and the
 
 The master branch was the only branch used for this website.
 
-[]: <https://github.com/Ljungwaldh/First-Milestone-Project>
-
 ## How to run the project locally
 
 To clone the project from Github:
 
-1. Click the following link to come to the [GitHub repository][] for this project
+1. Click the following link to come to the [GitHub repository][13] for this project
 2. Click on the green button 'Clone or Download'
 3. A dropdown window will appear titled 'Clone with HTTPS' - copy the link provided in the field below
 4. Open your local IDE
@@ -235,10 +233,7 @@ To clone the project from Github:
 6. Type in <code>git clone</code>, followed by pasting in the url copied from Step 3 alongside the git command.
 7. Press Enter, and the clone should subsequently be created
 
-Further troubleshooting on how to run the project locally can be found [here][].
-
-[]: <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>
-
+Further troubleshooting on how to run the project locally can be found [here][14].
 
 ## Credits
 
@@ -255,16 +250,16 @@ Video walkthrough to give inspiration for design on information section: https:/
 [2]: <https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_OrJR392xwRrdV2yWgI1RkCL5Vk_T44YppPBg32ONw8TTXwgM-ysdQYaAlm_EALw_wcB>
 [3]: <https://www.youtube.com/watch?v=Xy3GlrddZFI>
 [4]: <https://www.youtube.com/watch?v=nuOVuLrjioM>
-[5]: <>
-[6]: <>
-[7]: <>
-[8]: <>
-[9]: <>
-[10]: <>
-[11]: <>
-[12]: <>
-[13]: <>
-[14]: <>
+[5]: <https://jquery.com/>
+[6]: <https://gitpod.io/>
+[7]: <https://getbootstrap.com/>
+[8]: <https://github.com/>
+[9]: <https://fontawesome.com/>
+[10]: <https://popper.js.org/>
+[11]: <https://www.football-data.org/>
+[12]: <https://www.chartjs.org/>
+[13]: <https://github.com/Ljungwaldh/Milestone-Project_2>
+[14]: <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>
 [15]: <>
 [16]: <>
 [17]: <>
