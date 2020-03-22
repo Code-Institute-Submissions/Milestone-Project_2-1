@@ -135,22 +135,22 @@ done included:
         it was still possible to avoid this logic based on what the user's inital choices ofr leagues. The code was redone slightly, with the additon of
         keys to reference to. These were used in combination with two functions to indicate how the strcuture of the option tags would be depending on the 
         option value selected. The following code was finally the successful version:
-<code>
+
+```Javascript
     var keys = {
         "PL" : "<option disabled value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
         "FL1" : "<option value=\"PL\">English Premier League</option><option disabled value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
         "SA" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option disabled value=\"SA\">Italian Serie A</option><option value=\"PD\">Spanish La Liga</option>",
         "PD" : "<option value=\"PL\">English Premier League</option><option value=\"FL1\">French Ligue 1</option><option value=\"SA\">Italian Serie A</option><option disabled value=\"PD\">Spanish La Liga</option>"        
-}; </code><br>
+}; 
 
-<code>
 document.getElementById("list-1").addEventListener("change", function(e) {
     var i = this.options[this.selectedIndex].value;
     var other = document.getElementById("list-2");
     var index = other.selectedIndex;
     other.innerHTML = keys[i];
     other.selectedIndex = index;
-}); </code><br>
+});
 
 <code>
 document.getElementById("list-2").addEventListener("change", function(e) {
@@ -160,21 +160,21 @@ document.getElementById("list-2").addEventListener("change", function(e) {
     other.innerHTML = keys[i];
     other.selectedIndex = index;
 });
-</code>
+```
 
 2. Error message for images that failed to upload from API was only appearing on one side
     * I had implemented a logic that would display a default shield image alongside an error message if the API failed to upload an imagedue to the url not working. Unfortunately, the error message was only appearing on one side.
         * Fix: I needed to adjust the appended string that displays team inforamtion/stats into the cards so that I could pass in the teamNumber
         argument into the imgError function. This was needed, in additon to the specified image, to ensure the error message falls belwo the right team.
         The following code worked successfully in the end:
-        <code>
+        
+    ```Javascript
         function imgError(image, teamNumber) {
-        image.onerror = "";
-        image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
-        document.getElementById("img-error-message-" + teamNumber).innerHTML = "The image could not be loaded.";
-    return true;
-}    
-    <code>
+            image.onerror = "";
+            image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
+            document.getElementById("img-error-message-" + teamNumber).innerHTML = "The image could not be loaded.";
+        return true;
+}```
 
 3. Anchor tags for the tooltip and for a team selected redirecting the user inconveniently
     * Anchor tags for selecting a team would redirect users far down towards the graphs, causing slight confusion and potential frustration froma user experience point of view. The tooltip anchor tag had not been defined, and so clicking on this redirected users back the the landing section.
