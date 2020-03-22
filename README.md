@@ -103,7 +103,7 @@ I used the tool Balsamiq in order to create my wireframe. I prodcued one png fil
 The reason that this wireframe is vey concise is that my initial thoughts were that the design of the webpage would be more concise than
 how then end product of my project looks like.
 
-![Wireframe of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/wireframes/one-more-team-wireframe.png)
+![Wireframe of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../wireframes/one-more-team-wireframe.png)
 
 ## Features
 
@@ -113,7 +113,7 @@ how then end product of my project looks like.
 * Upon arrival to the website the user is greeted with a hero video of a camera panning around a football stadium from a sky view to give an impactful, football-related introduction. This is couple with a simple text logo with a slogan
 * Simple call to action button ‘Get Started’ to direct users to the next section
 
-![Hero/Landing section of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/landing-section.png)
+![Hero/Landing section of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/landing-section.png)
 
 ##### Differentiations from Wireframe
 * Placed Website logo test and slogan over the hero media instead
@@ -127,9 +127,9 @@ how then end product of my project looks like.
 * Slide up animation when users hover mouse over on desktop (press on smartphone/tablet) on the information boxes helps to give some user feedback and assistance in reading specific information boxes
 * Simple call to action at the bottom with the text ‘Find Your team’ again helps users to be directed to the next step without having to scroll down
 
-![First Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/info-section-1.png)
-![Second Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/info-section-2.png)
-![Third Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/info-section-3.png)
+![First Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/info-section-1.png)
+![Second Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/info-section-2.png)
+![Third Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/info-section-3.png)
 
 ##### Differentiations from Wireframe
 
@@ -143,12 +143,12 @@ how then end product of my project looks like.
 * Animations on team data slide down and sliding up provide smooth transitions
 * When a team selected does not successfully load its image from the API, a placeholder image and error message below are put in place for clear user feedback on the server/API error
 
-![First Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/match-up-section-1.png)
-![Second Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/match-up-section-2.png)
-![Third Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/match-up-section-3.png)
-![Fourth Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/match-up-section-4.png)
-![Fifth Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/match-up-section-5.png)
-![Image Error iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/image-error.png)
+![First Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/match-up-section-1.png)
+![Second Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/match-up-section-2.png)
+![Third Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/match-up-section-3.png)
+![Fourth Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/match-up-section-4.png)
+![Fifth Information section iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/match-up-section-5.png)
+![Image Error iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/image-error.png)
 
 ##### Differentiations from Wireframe
 * Addition of pie charts to visualize certain league statistics of the teams
@@ -159,7 +159,7 @@ how then end product of my project looks like.
 * Simple footer provides social media icon links to different social media platforms, where users can be redirected to relevant social media pages related to the website/application
 * An email is provided as additional information on how to get in contact with the website owner, plus information about the the developer of the website and application
 
-![Footer iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/footer-displayed.png)
+![Footer iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/footer-displayed.png)
 
 ##### Differentiations from Wireframe
 * The contents of the foooter are centered from the start instead of having contact details/website information on one side and the social media links on the other
@@ -169,7 +169,7 @@ side. This choice was made since the developer felt, from a design perspective, 
 * Since the API used in this project for football data allows only 10 calls per minute on a free account, the need for user feedback is apparent in regards to if the user makes too many selections in quick succession and/or too many users using the website
 * A simple and straightforward modal appears when this API error appears in the screen through a fade in animation, indicating to the user to please wait a minute in order to get the data requests working again
 
-![API Calls Error Modal iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/website-sceenshots/api-calls-error.png)
+![API Calls Error Modal iaage of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../website-sceenshots/api-calls-error.png)
 
 ##### Differentiations from Wireframe
 * This feature was not included in the wireframe, where this scenario had not been accounted for yet at the time of drafting up the wireframe
