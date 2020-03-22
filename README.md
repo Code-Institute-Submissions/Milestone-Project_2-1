@@ -179,7 +179,7 @@ side. This choice was made since the developer felt, from a design perspective, 
 In the wireframe I set the ambition to have a Subscribe feature, where a button is present under each teams’ stats and graphs. 
 This button would produce a modal with a form to enter the user’s email address, and once submitted, exits the modal and a quick 
 pop up message appears thanking the user for subscribing. The user would then receive an email informing him/her which team they 
-have subscribed to. This requires implementation of the EmailJS API, which unfortunately was not possible within the time scope 
+have subscribed to. This requires implementation of the [EmailJS API][34], which unfortunately was not possible within the time scope 
 of this project.
 
 #### 2. Access to more team statistics 
@@ -203,10 +203,12 @@ This project has included the use of HTML, CSS and Javascript programming langua
 * [FontAwesome][9] - Icons in the footer section for social media links coming from this resource
 * [Football-data.org][11] - API used by developer in order to retrieve football data that is displayed in the web page
 * [ChartJS][12] - Developer chose specific stats to display visually in a pie chart using this chart making API
+* [ImgBB][15] - Hosted my screenshot images through this tool so that I was able to embed them into the README.md file
+    * Embedding the images files from the workspace via /assets/website-screenshots/ was not rendering the images into the README file in Github, and as a result, chose this solution to the issue
 
 ## Testing
 
-All information about the testing procedures I conducted can be found here in a separate testing.md file
+All information about the testing procedures I conducted can be found here in a separate [testing.md file][36]
 
 # Deployment
 
@@ -237,13 +239,30 @@ Further troubleshooting on how to run the project locally can be found [here][14
 
 ## Credits
 
-Video by Kelly Lacy from Pexels: https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/
-Code for displaying video files onto html page: https://www.w3schools.com/html/html5_video.asp
-Code from StackOverlfow on additonal attributes needed for video to work, these being 'muted' as browser requirement, and 'playsinline' for mobile adaptability:
-https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5
-Video I coded along to in order to understand how I could make a header section with a video as the background:
-https://www.youtube.com/watch?v=Xy3GlrddZFI
-Video walkthrough to give inspiration for design on information section: https://www.youtube.com/watch?v=nuOVuLrjioM
+### Content
+* Inspiration for structuring my README.md and testing.md markdown files comes from [AJ Greaves on GitHub][16] and her PicFlip project
+* Inspiration for designing my website with thought towards sports website design comes from [Oksana Preda on templatemonster.com][1]
+* Inspiration for colour schem of website comes from [Eleanor Innis on Shutterstock Blog][2]
+* Fooball data in terms of leagues, team information, team statistics and team crest images provided by the API [football-data.org][11]
+
+### Media 
+* Backgrond video used for Hero header/landing section provided by [Kelly Lucy on Pexels.com][17]
+* Placeholder image for images that didn't successfully load into the page from the API provided by [NOTSDFJKL on Clker][18]
+
+### Code
+* [W3Schools][19] providing code to help construct video tag on html, [code line 35-37][20]
+* [StackOverflow code by micah5 and Raluca Albu][21] helping with attriutes to add to video tags in order for the video to loop and work on all browser/devices, [code line 35][20]
+* [Youtube video by Traversy Media][22] I coded along to in build html and css for video background in landing section of website. Codepen reference can also be found [here][23]
+* [Youtube video by Online Tutorials][24] I coded along to for inspiration for html and css for the information and team match-up sections
+* [StackOverflow code by Nick Suwyn][25] helped with learning how to pass arguments from one javascript file to another, where in my project I wanted to pass arguments and data from index.js file to charts.js file
+* [W3Schools][26] providing css code that enables smooth scrolling when anchor tags are clicked on
+* [Youtube video by Online Tutorials][27] I coded along to parts to in order to style my select tags using html and css
+* [W3Schools][28] providing code as inspiration in building my error modal for when too many API calls were made by the user
+* [StackOverflow code by xnakos][29] providing inspiration for code i wrote that prevents graph instances from being stored on web page and stacking on top of each other after subsequent team selections. More specifically, I needed code that destroys previous graph instances before a new graph is generated
+* [Youtube video by Learning Tutorial Point][30] I gained inspiration from in building my footer with html and css
+* [MDN Web Docs][31] providing documentation on how to use template literals, which I implemented into my index.js file code line 56 to increase readability of appended string
+* Used code from [Ry- on StackOverflow][32] and from [W3Schools][33] to build a hybrid solution for my defensive programming in regards to API image urls not working. This user feedback includes a default shield image and and error text below this
+* [Code lines 145 to 167 in my index.js file][35] was thanks to ideas by Matt Rudge and Nakita McCool from Code Institute, where in the end a hybrid solution of both their suggestions was built. This logic was built to ensure users do not select the same league in both league dropdowns
 
 
 [1]: <https://www.templatemonster.com/blog/9-essential-sport-web-design-features/>
@@ -260,39 +279,31 @@ Video walkthrough to give inspiration for design on information section: https:/
 [12]: <https://www.chartjs.org/>
 [13]: <https://github.com/Ljungwaldh/Milestone-Project_2>
 [14]: <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository>
-[15]: <>
-[16]: <>
-[17]: <>
-[18]: <>
-[19]: <>
-[20]: <>
-[21]: <>
-[22]: <>
-[23]: <>
-[24]: <>
-[25]: <>
-[26]: <>
-[27]: <>
-[28]: <>
-[29]: <>
-[30]: <>
-[31]: <>
-[32]: <>
-[33]: <>
-[34]: <>
-[35]: <>
-[36]: <>
-[37]: <>
-[38]: <>
-[39]: <>
-[40]: <>
-[41]: <>
-[42]: <>
-[43]: <>
-[44]: <>
-[45]: <>
-[46]: <>
-[47]: <>
-[48]: <>
-[49]: <>
-[50]: <>
+[15]: <https://imgbb.com/>
+[16]: <https://github.com/AJGreaves/picflip>
+[17]: <https://www.pexels.com/video/soccer-game-in-a-stadium-2657257/>
+[18]: <http://www.clker.com/clipart-black-shield.html>
+[19]: <https://www.w3schools.com/html/html5_video.asp>
+[20]: <https://github.com/Ljungwaldh/Milestone-Project_2/blob/master/index.html>
+[21]: <https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5>
+[22]: <https://www.youtube.com/watch?v=Xy3GlrddZFI>
+[23]: <https://codepen.io/bradtraversy/pen/pWpRom>
+[24]: <https://www.youtube.com/watch?v=nuOVuLrjioM>
+[25]: <https://stackoverflow.com/questions/3809862/can-we-call-the-function-written-in-one-javascript-in-another-js-file/3811763>
+[26]: <https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2>
+[27]: <https://www.youtube.com/watch?v=LekyHMiuNgI&t=247s>
+[28]: <https://www.w3schools.com/howto/howto_css_modals.asp>
+[29]: <https://stackoverflow.com/questions/40056555/destroy-chart-js-bar-graph-to-redraw-other-graph-in-same-canvas>
+[30]: <https://www.youtube.com/watch?v=tmEXwn04TYU>
+[31]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>
+[32]: <https://stackoverflow.com/questions/92720/jquery-javascript-to-replace-broken-images>
+[33]: <https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onerror_html>
+[34]: <https://dashboard.emailjs.com/>
+[35]: <https://github.com/Ljungwaldh/Milestone-Project_2/blob/master/assets/js/index.js>
+[36]: <https://github.com/Ljungwaldh/Milestone-Project_2/blob/master/testing.md>
+
+### Acknowledgements
+* I would like to add my sincere thanks to the tutors at Code Institute, especially Xavier and kevin (who are assigned to the full-time cohort) for their extensive support throughout the whole project
+* I would like to thank senior developers Guilherme Caminha and André Ericson at Precis Digital AB for extra guidance and coaching during the project, especially in building the team match-up logic and in debugging initial errors when building my pie charts with ChartJS
+* I would like to pass on my thanks to my class mae Louie O'Hagan for the suggestion to use template literals, as well as providing other suggestions of how to remove warnings from my JSHint validation of my javascript code
+* I would like to pass on my gratitude and thanks to my mentor Anthony Ngene for pushing me to create the best project possible, with ideas such as animations for when team stats appear, for having graphs display below team stats, and for pointing out that I would need to have clear information indicating what the website does 

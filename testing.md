@@ -173,7 +173,7 @@ document.getElementById("list-2").addEventListener("change", function(e) {
             image.src = "https://i.pinimg.com/236x/59/db/6a/59db6a59aa56cfadc5682bd61cf4c552--crests-symbols.jpg";
             document.getElementById("img-error-message-" + teamNumber).innerHTML = "The image could not be loaded.";
         return true;
-}
+        }
 ``
 
 3. Anchor tags for the tooltip and for a team selected redirecting the user inconveniently
