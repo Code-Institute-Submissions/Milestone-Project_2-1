@@ -54,9 +54,9 @@ potential new customers/fans
 
 ### Design Choices
 
-#### Inspiration:
-https://www.templatemonster.com/blog/9-essential-sport-web-design-features/
-This blog post inspired a number of my style choices when creating the website/application.
+#### Overall Inspiration:
+
+[This blog post][1] inspired a number of my style choices when creating the website/application.
 
 #### Font
 Sans-serif was my font of choice, as it is a font that is easy to read and allows users to focus more on the other design aspects 
@@ -68,9 +68,7 @@ users how to access website-related social media pages
 
 #### Colours
 
-https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_OrJR392xwRrdV2yWgI1RkCL5Vk_T44YppPBg32ONw8TTXwgM-ysdQYaAlm_EALw_wcB
-
-I drew inspiration from this website for my colour scheme that ended up predominately following the SCUBA theme, consisting of coral, 
+I drew inspiration from [this blog post][2] for my colour scheme that ended up predominately following the SCUBA theme, consisting of coral, 
 ice blue, grey and teal. I felt this colour scheme could effectively draw the user’s focus better on the main parts of the 
 website/application. These main aspects included the call to actions to direct users through the application journey as well as highlighting
 the main team match-up feature.
@@ -79,13 +77,12 @@ the main team match-up feature.
 
 Drawing from the main sport website inspiration blog post, videos as backgrounds were suggested and I felt this would have 
 a positive impact on users first arriving to the website. The call to action follows the recommendation of what is common for 
-good websites in general to ensure good UX performance. In terms of implementing the video background, I used this Youtube 
-video for inspiration https://www.youtube.com/watch?v=Xy3GlrddZFI. The actual video itself I obtained as a free stock video 
-from Pexels.com.
+good websites in general to ensure good UX performance. In terms of implementing the video background, I used 
+[this Youtube video][3] for inspiration. The actual video itself I obtained as a free stock video from Pexels.com.
 
 #### Information Section
 
-Followed inspiration for design from this Youtube video https://www.youtube.com/watch?v=nuOVuLrjioM. This design is for service 
+Followed inspiration for design from [this Youtube video][4]. This design is for service 
 information on a website. Since I felt that the application that’s on offer is a type of service, I felt this design could be a 
 good way to explain the concept to users as easily as possible. Especially, since the concept is new for football fans, I felt 
 it was very important to have a design that can clearly convey information. The bolder call to action helps direct users further 
@@ -106,6 +103,7 @@ I used the tool Balsamiq in order to create my wireframe. I prodcued one png fil
 The reason that this wireframe is vey concise is that my initial thoughts were that the design of the webpage would be more concise than
 how then end product of my project looks like.
 
+![Wireframe of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/wireframes/one-more-team-wireframe.png)
 
 ## Features
 
@@ -232,3 +230,55 @@ https://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-lo
 Video I coded along to in order to understand how I could make a header section with a video as the background:
 https://www.youtube.com/watch?v=Xy3GlrddZFI
 Video walkthrough to give inspiration for design on information section: https://www.youtube.com/watch?v=nuOVuLrjioM
+
+
+[1]: <https://www.templatemonster.com/blog/9-essential-sport-web-design-features/>
+[2]: <https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_OrJR392xwRrdV2yWgI1RkCL5Vk_T44YppPBg32ONw8TTXwgM-ysdQYaAlm_EALw_wcB>
+[3]: <https://www.youtube.com/watch?v=Xy3GlrddZFI>
+[4]: <https://www.youtube.com/watch?v=nuOVuLrjioM>
+[5]: <>
+[6]: <>
+[7]: <>
+[8]: <>
+[9]: <>
+[10]: <>
+[11]: <>
+[12]: <>
+[13]: <>
+[14]: <>
+[15]: <>
+[16]: <>
+[17]: <>
+[18]: <>
+[19]: <>
+[20]: <>
+[21]: <>
+[22]: <>
+[23]: <>
+[24]: <>
+[25]: <>
+[26]: <>
+[27]: <>
+[28]: <>
+[29]: <>
+[30]: <>
+[31]: <>
+[32]: <>
+[33]: <>
+[34]: <>
+[35]: <>
+[36]: <>
+[37]: <>
+[38]: <>
+[39]: <>
+[40]: <>
+[41]: <>
+[42]: <>
+[43]: <>
+[44]: <>
+[45]: <>
+[46]: <>
+[47]: <>
+[48]: <>
+[49]: <>
+[50]: <>
