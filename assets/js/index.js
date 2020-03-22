@@ -1,3 +1,4 @@
+// Global variables related to the football-data.org API
 var _DATAGLOBAL = {};
 const _APIKEY = "b010fe05a02c4ddc8336e4c77243bb3c";
  
@@ -54,8 +55,6 @@ function dropDownOptionsInMyPage(teamNumber, leagueCode, teamListData) {
         
         dropdown_html_string +=  `<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('${leagueCode}', 'team-stats-${teamNumber}', '${i}', '${teamNumber}')">${table[i].team.name}</a>`;
     }
-
-    //"<a class=\"dropdown-item\" href=\"#team-stats-1\" onclick=\"teamMatchUp('"+leagueCode+"', 'team-stats-" + teamNumber + "', '" + i + "', '" + teamNumber + "')\">"  + table[i]["team"]["name"] + "</a>";
     
     team_dropdown_div.innerHTML = dropdown_html_string;
 
