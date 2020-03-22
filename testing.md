@@ -28,6 +28,13 @@ dedicated to using the ChartJS API
 * One unused variable, this being teamMatchUp (code line 80). In reagrds to this, this is probably again down to the appended team dropdown options with the
 onclick event listener and arguments in the html string that appends into the respective team-stats div tags.
 
+After adjustments to the code for fixing bugs and addressing the above points for the index.js file, JSHint returned back with these notices:
+* One undefined variable (code line 111, teamStatsGraphs) - This is due to the fact that this function is defined in a separate javascript file dedicated to ChartJS code
+* Two unused variables (code line 81 teamMatchUp), (code line 115 imgError) - These are due to the fact that these are connected to event listeners that are located in html elements
+
+For the final check on the chart.js file, the only notice to come back was stating that Chart was an undefined variable. This is due to the fact that this reference is part of
+a CHartJS specific syntax in the function that draws the graphs, so it may not be recognised by JSHint in this case.
+
 ## User Stories Testing
 
 1. As a new visitor to the website, I want it to be very clear as to what the purpose of the website is
