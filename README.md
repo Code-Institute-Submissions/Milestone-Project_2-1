@@ -103,7 +103,7 @@ I used the tool Balsamiq in order to create my wireframe. I prodcued one png fil
 The reason that this wireframe is vey concise is that my initial thoughts were that the design of the webpage would be more concise than
 how then end product of my project looks like.
 
-![Wireframe of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](../wireframes/one-more-team-wireframe.png)
+![Wireframe of Gustaf Ljungwaldh's Second Milestone project 'One More Team'](assets/wireframes/one-more-team-wireframe.png)
 
 ## Features
 
@@ -175,7 +175,7 @@ side. This choice was made since the developer felt, from a design perspective, 
 * This feature was not included in the wireframe, where this scenario had not been accounted for yet at the time of drafting up the wireframe
 
 ### Features Left to Implement
-#### 1. Subscribe feature, 
+#### 1. Subscribe feature 
 In the wireframe I set the ambition to have a Subscribe feature, where a button is present under each teams’ stats and graphs. 
 This button would produce a modal with a form to enter the user’s email address, and once submitted, exits the modal and a quick 
 pop up message appears thanking the user for subscribing. The user would then receive an email informing him/her which team they 
