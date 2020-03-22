@@ -15,7 +15,7 @@ where any errors/warnings were addressed directly and documented in commits. Upo
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for CSS
 I inserted the code into the validator via direct input. No errors were were found upon final check.
 
-[JSHint][https://jshint.com/] for Javascript
+[JSHint](https://jshint.com/) for Javascript
 I inserted the code into the validator via direct input. Found a number of warnings, these includng:
 * Several instances where semi-colons were missing, which I addressed directly
 * Several mentions of 'const', 'for of' and 'let' with the note 'is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)'. For thse warnings I
@@ -158,7 +158,7 @@ document.getElementById("list-2").addEventListener("change", function(e) {
     other.innerHTML = keys[i];
     other.selectedIndex = index;
 });
-<code>
+</code>
 
 2. Error message for images that failed to upload from API was only appearing on one side
     * I had implemented a logic that would display a default shield image alongside an error message if the API failed to upload an imagedue to the url not working. Unfortunately, the error message was only appearing on one side.
