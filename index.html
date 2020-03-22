@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,188 +10,185 @@
     <script src="https://kit.fontawesome.com/ae98632ed3.js" crossorigin="anonymous"></script>
     <title>One More Team</title>
 </head>
+
 <body>
 
-<header>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <h2>Sorry for the inconvenience</h2>
-                <p>This version of the application is unable to handle the number of recent data requests</p>
-                <p>Please check back in a minute</p>
-            </div>
-            <div class="modal-footer">
+    <header>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <h2>Sorry for the inconvenience</h2>
+                    <p>This version of the application is unable to handle the number of recent data requests</p>
+                    <p>Please check back in a minute</p>
+                </div>
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Hero Video and Logo/Text -->
-    <div class="container v-header">
-        <div class="fullscreen-video-wrap">
+        <!-- Hero Video and Logo/Text -->
+        <div class="container v-header">
+            <div class="fullscreen-video-wrap">
                 <video autoplay loop muted playsinline>
-                    <source src="assets/videos/hero-image.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+                    <source src="assets/videos/hero-image.mp4" type="video/mp4"> Your browser does not support the video tag.
                 </video>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <h1>One More Team</h1>
+                <p>Follow more football, wherever you are</p>
+                <a href="#info-section" class="btn scrollTo">Get Started</a>
+            </div>
         </div>
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>One More Team</h1>
-            <p>Follow more football, wherever you are</p>
-            <a href="#info-section" class="btn scrollTo">Get Started</a>
-        </div>
-    </div>
-</header>
+    </header>
 
-<section class="website-info" id="info-section">
-    <div class="container">
-        <div class="row justify-content-center info-heading">
-        <h2>About</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-7 info-box">
-                        <div class="box" id="purpose-header">
-                            <h2>01</h2>
-                            <h3>Why One More Team</h3>
-                            <p>Following your team doesn't quite satisfy your football passion?
+    <section class="website-info" id="info-section">
+        <div class="container">
+            <div class="row justify-content-center info-heading">
+                <h2>About</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7 info-box">
+                    <div class="box" id="purpose-header">
+                        <h2>01</h2>
+                        <h3>Why One More Team</h3>
+                        <p>Following your team doesn't quite satisfy your football passion?
                             <br>Maybe moved to a new country, and need inspiration for a team
-                            <a href="#purpose-header" data-toggle="tooltip" data-placement="bottom" 
-                            title="Traditonally football fans follow one team, this usually from their native country. However, with globalisation of the sport comes increasing curiousity to follow football elsewhere">more local to support?</a>
-                            <br>Whatever the reason, <strong>One More Team</strong> is here to help with that very inspiration - 
-                            helping you to find one more team to support</p>
-                        </div>
+                            <a href="#purpose-header" data-toggle="tooltip" data-placement="bottom" title="Traditonally football fans follow one team, this usually from their native country. However, with globalisation of the sport comes increasing curiousity to follow football elsewhere">more local to support?</a>
+                            <br>Whatever the reason, <strong>One More Team</strong> is here to help with that very inspiration - helping you to find one more team to support</p>
                     </div>
-                    <div class="col-lg-4 col-md-7 info-box">
-                        <div class="box">
-                            <h2>02</h2>
-                            <h3>How It Works</h3>
-                            <p><strong>Version 1.0 provides you a team recommendation based
+                </div>
+                <div class="col-lg-4 col-md-7 info-box">
+                    <div class="box">
+                        <h2>02</h2>
+                        <h3>How It Works</h3>
+                        <p><strong>Version 1.0 provides you a team recommendation based
                             on current league position</strong>. Leagues available to choose from include:</p>
-                            <ul>
-                                <li>English Premier League</li>
-                                <li>French Ligue 1</li>
-                                <li>Italian Serie A</li>
-                                <li>Spanish La Liga</li>
-                            </ul>
-                            <p>All you need to do is:</p>
-                            <ol>
-                                <li>Select the league(s)</li>
-                                <li>Select a team</li>
-                                <li>Team recommendation is generated, along with stats about each team</li>
-                            </ol>
-                        </div>
+                        <ul>
+                            <li>English Premier League</li>
+                            <li>French Ligue 1</li>
+                            <li>Italian Serie A</li>
+                            <li>Spanish La Liga</li>
+                        </ul>
+                        <p>All you need to do is:</p>
+                        <ol>
+                            <li>Select the league(s)</li>
+                            <li>Select a team</li>
+                            <li>Team recommendation is generated, along with stats about each team</li>
+                        </ol>
                     </div>
-                    <div class="col-lg-4 col-md-7 info-box">
-                        <div class="box">
-                            <h2>03</h2>
-                            <h3>Future Features</h3>
-                            <p>Here's a taste of what is to come in future releases:</p>
-                            <ul>
-                                <li>More leagues to choose from</li>
-                                <li>Filter which stats you want your team recommendation to be based on</li>
-                                <li>Subscribe feature, updating you on your new-found team</li>
-                                <li>Filter for time range</li>
-                                <li>Team recommendation feature also generates information that can redirect users to team websites/social media</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-md-7 info-box">
+                    <div class="box">
+                        <h2>03</h2>
+                        <h3>Future Features</h3>
+                        <p>Here's a taste of what is to come in future releases:</p>
+                        <ul>
+                            <li>More leagues to choose from</li>
+                            <li>Filter which stats you want your team recommendation to be based on</li>
+                            <li>Subscribe feature, updating you on your new-found team</li>
+                            <li>Filter for time range</li>
+                            <li>Team recommendation feature also generates information that can redirect users to team websites/social media</li>
+                        </ul>
                     </div>
-                    <div class="col-12">
-                        <a href="#match-up-section" class="btn scrollTo">Find Your Team</a>
-                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#match-up-section" class="btn scrollTo">Find Your Team</a>
+                </div>
             </div>
         </div>
-</section>
+    </section>
 
-
-<!--DROPDOWN MENUS FOR LEAGUE AND TEAM SELECTION-->
-<section class="team-match-up-feature" id="match-up-section">
-    <div class="container-fluid match-up-feature">
-        <div class="row justify-content-center">
-            <div class="col match-up-heading">
-            <h2>Find One More Team</h2>
+    <!--DROPDOWN MENUS FOR LEAGUE AND TEAM SELECTION-->
+    <section class="team-match-up-feature" id="match-up-section">
+        <div class="container-fluid match-up-feature">
+            <div class="row justify-content-center">
+                <div class="col match-up-heading">
+                    <h2>Find One More Team</h2>
+                </div>
             </div>
-        </div>
-        <div class="row justify-content-around">
-            <div class="col-md-6 col-lg-4">
+            <div class="row justify-content-around">
+                <div class="col-md-6 col-lg-4">
                     <select class="league-list" id="list-1" onchange="populateTeamDropdowns('1')">
                         <option value="PL">English Premier League</option>
                         <option disabled value="FL1">French Ligue 1</option>
                         <option value="SA">Italian Serie A</option>
                         <option value="PD">Spanish La Liga</option>
                     </select>
-                <div class="dropdown team-selection-1">
-                    <button class="btn btn-secondary dropdown-toggle" id="firstDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select Team
-                    </button>
-                    <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="firstDropdownMenuButton">
+                    <div class="dropdown team-selection-1">
+                        <button class="btn btn-secondary dropdown-toggle" id="firstDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Team
+                        </button>
+                        <div class="team-list dropdown-menu" id="team-list-1" aria-labelledby="firstDropdownMenuButton">
+                        </div>
+                        <div class="team-stats-div" id="team-stats-1"></div>
                     </div>
-                    <div class="team-stats-div" id="team-stats-1"></div>
-                </div>
-                <div class="chart-container" id="charts-div-1">
-                    <div class="card">
-                        <div class="card-body">
-                            <canvas id="games-chart-1"></canvas>
+                    <div class="chart-container" id="charts-div-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="games-chart-1"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </div>
-        
-            <div class="col-md-6 col-lg-4">
+
+                <div class="col-md-6 col-lg-4">
                     <select class="league-list" id="list-2" onchange="populateTeamDropdowns('2')">
                         <option disabled value="PL">English Premier League</option>
                         <option value="FL1">French Ligue 1</option>
                         <option value="SA">Italian Serie A</option>
                         <option value="PD">Spanish La Liga</option>
                     </select>
-                    
-                <div class="dropdown team-selection-2">
-                <button class="btn btn-secondary dropdown-toggle" id="secondDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select Team
-                </button>
-                <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="secondDropdownMenuButton">
-                </div>
-                <div class="team-stats-div" id="team-stats-2"></div>
-            </div>
-            <div class="chart-container" id="charts-div-2">
-                <div class="card">
-                    <div class="card-body">
-                        <canvas id="games-chart-2"></canvas>
+
+                    <div class="dropdown team-selection-2">
+                        <button class="btn btn-secondary dropdown-toggle" id="secondDropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Team
+                        </button>
+                        <div class="team-list dropdown-menu" id="team-list-2" aria-labelledby="secondDropdownMenuButton">
+                        </div>
+                        <div class="team-stats-div" id="team-stats-2"></div>
+                    </div>
+                    <div class="chart-container" id="charts-div-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <canvas id="games-chart-2"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-         </div>
-        </div>
-    
 </section>
 
-<footer>
-    <div class="footer-main-div">
-        <div class="footer-social-icons">
-            <h5>Social Media</h5>
-            <ul>
-                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
+    <footer>
+        <div class="footer-main-div">
+            <div class="footer-social-icons">
+                <h5>Social Media</h5>
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h5>One More Team</h5>
+                <p>Email: gus@onemoreteam.com</p>
+                <p>A website and application developed by Gustaf Ljungwaldh</p>
+            </div>
         </div>
-        <div class="footer-contact">
-            <h5>One More Team</h5>
-            <p>Email: gus@onemoreteam.com</p>
-            <p>A website and application developed by Gustaf Ljungwaldh</p>
-        </div>
-    </div>
-</footer>
-<!--SCRIPTS-->
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script src="assets/js/charts.js"></script>
-<script src="assets/js/index.js"></script> 
+    <!--SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>
